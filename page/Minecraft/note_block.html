@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="./../../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Component : Note block</h1>
+        <div>
+            <div>
+                <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./../../index.html">Home</a></li>
+                    <li><a href="./../../about.html">About</a></li>
+                    <li><a href="./../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Description</h2>
+            <p>This is the component provided by the note block with the adapter.</p>
+            <p>Component name: <code> note_block</code>.</p>
+        </article>
+        <article>
+            <h2>Methods</h2>
+            <ul>
+                <li>
+                    <code>getPitch():number</code> Get the currently set pitch on this note block.
+                </li>
+                <li>
+                    <code>setPitch(value:number)</code> Set the pitch for this note block. Must be in the interval [1, 25].
+                </li>
+                <li>
+                    <code>trigger([pitch:number]):boolean</code> Triggers the note block if possible. Allows setting the pitch for to save a tick.
+                </li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>copyright 2023 - Documentation</p>
+    </footer>
+</body>
+</html>

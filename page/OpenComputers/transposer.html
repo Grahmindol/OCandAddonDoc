@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="./../../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Component : </h1>
+        <div>
+            <div>
+                <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./../../index.html">Home</a></li>
+                    <li><a href="./../../about.html">About</a></li>
+                    <li><a href="./../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Description</h2>
+            <p>This is the component provided by the Transposer block.</p>
+            <p>Component name: <code> transposer</code>.</p>
+        </article>
+        <article>
+            <h2>Methods</h2>
+            <ul>
+                <li>
+                    <code>transferFluid(sourceSide:number, sinkSide:number, count:number):boolean, number</code> Transfer some fluids between two fluid handlers (pipes or tanks, etc). sourceSide is the side pulled from and sinkSide is the side transferred to. The side value is a integral value representing the cardinal directions (east, west, south, north), up, and down. The sides library has these values for convenience. count is the number of millibuckets to transfers. Returns true and the number of millibuckets transfered on success, or false and an error message on failure.
+                </li>
+                <li>
+                    <code>store(side:number, slot:number, dbAddress:string, dbSlot:number):boolean</code> Store an item stack description in the specified slot of the database with the specified address.
+                </li>
+                <li>
+                    <code>compareStackToDatabase(side:number, slot:number, dbAddress:string, dbSlot:number, checkNBT:boolean=false):boolean</code> Compare an item in the specified slot in the inventory on the specified side with one in the database with the specified address.
+                </li>
+                <li>
+                    <code>getSlotStackSize(side:number, slot:number):number</code> Get number of items in the specified slot of the inventory on the specified side of the device.
+                </li>
+                <li>
+                    <code>getSlotMaxStackSize(side:number, slot:number):number</code> Get the maximum number of items in the specified slot of the inventory on the specified side of the device.
+                </li>
+                <li>
+                    <code>getInventoryName(side:number):string</code> Get the the name of the inventory on the specified side of the device.
+                </li>
+                <li>
+                    <code>getFluidInTank(side:number , tank:number):table</code> Get a description of the fluid in the the specified tank on the specified side.
+                </li>
+                <li>
+                    <code>getTankLevel(side:number , tank:number):number</code> Get the amount of fluid in the specified tank on the specified side.
+                </li>
+                <li>
+                    <code>transferItem(fromSide:number, toSide:number[, count:number, fromSlot:number[, toSlot:number]]):number</code> Transfer some items between two inventories.
+                </li>
+                <li>
+                    <code>compareStacks(side:number, slotA:number, slotB:number, checkNBT:boolean=false):boolean</code> Get whether the items in the two specified slots of the inventory on the specified side of the device are of the same type.
+                </li>
+                <li>
+                    <code>areStacksEquivalent(side:number, slotA:number, slotB:number):boolean</code> Get whether the items in the two specified slots of the inventory on the specified side of the device are equivalent (have shared OreDictionary IDs).
+                </li>
+                <li>
+                    <code>getTankCount(side:number):number</code> Get the number of tanks available on the specified side.
+                </li>
+                <li>
+                    <code>getStackInSlot(side:number, slot:number):table</code> Get a description of the stack in the inventory on the specified side of the device.
+                </li>
+                <li>
+                    <code>getTankCapacity(side:number , tank:number):number</code> Get the capacity of the specified tank on the specified side.
+                </li>
+                <li>
+                    <code>getAllStacks(side:number):userdata</code> Get a description of all stacks in the inventory on the specified side of the device.
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>description of all stacks</h2>
+            <p>Calling it will return a table describing the stack in the inventory or nothing if the iterator reaches end.</p>
+            <ul>
+                <li>
+                    <code>getAll():table</code> Returns ALL the stack in the this.array. Memory intensive.
+                </li>
+                <li>
+                    <code>count():number</code> Returns the number of elements in the this.array.
+                </li>
+                <li>
+                    <code>reset()</code> Reset the iterator index so that the next call will return the first element.
+                </li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>copyright 2023 - Documentation</p>
+    </footer>
+</body>
+</html>

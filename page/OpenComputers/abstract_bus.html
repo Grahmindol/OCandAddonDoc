@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="./../../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Component : Abstract Bus</h1>
+        <div>
+            <div>
+                <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./../../index.html">Home</a></li>
+                    <li><a href="./../../about.html">About</a></li>
+                    <li><a href="./../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Description</h2>
+            <p>This card allows for interfacing with Stargate Tech 2's Abstract Bus system.</p>
+            <p>Component name: <code> abstract_bus. </code></p>
+        </article>
+        <article>
+            <h2>Methods</h2>
+            <ul>
+                <li>
+                    <code>getEnabled(): boolean</code> <p>Returns whether the local bus interface is enabled. </p>
+                </li>
+                <li>
+                    <code>setEnabled(enabled: boolean)</code> <p>Sets whether the local bus interface should be enabled </p>
+                </li>
+                <li>
+                    <code>getAddress(): number</code> <p>Returns the local interface address. number is a 16 bit hexadecimal number (0xFFFF being a broadcast). Returns 0 if an address has not yet been set. </p>
+                </li>
+                <li>
+                    <code>setAddress(address: number)</code> <p>Sets the local interface address. number is a 16bit hexadecimal number. </p>
+                </li>
+                <li>
+                    <code>scan(mask: number): table</code> <p>Scans the abstract bus for attached devices and returns them in a list. </p>
+                </li>
+                <li>
+                    <code>send(address: number, data: table): boolean</code> <p>Sends data across the abstract bus. The table data is in the form of key-value pairs. </p>
+                </li>
+                <li>
+                    <code>maxPacketSize(): number</code> <p>Returns the maximum size a packet can be sent over the bus. </p>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>Events</h2>
+            <ul>
+                <li>
+                    <code>bus_message(protocolId: number, senderAddress: number, targetAddress: number, data: table, metadata: table)</code> <p>Triggered when a message is received on the abstract bus. </p> <br />
+                    <p>protocolId is the protocol version that was used.</p> <br />
+                    <p>senderAddress is the address of the sender.</p> <br />
+                    <p>targetAddress is the address of the device that the messages was intended for (-1 for network broadcasts).</p> <br />
+                    <p>data is a table of the data that was sent.</p> <br />
+                    <p>metadata is a table of data that are unique to the device that send the address.</p>
+                </li>
+            </ul>
+        </article>
+</main>
+    <footer>
+        <p>copyright 2023 - Documentation</p>
+    </footer>
+</body>
+</html>

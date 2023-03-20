@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="./../../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Component : Inventory</h1>
+        <div>
+            <div>
+                <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./../../index.html">Home</a></li>
+                    <li><a href="./../../about.html">About</a></li>
+                    <li><a href="./../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Description</h2>
+            <p>This is the component provided by by all the blocks which contain item (and which are well coded) with the adapter.</p>
+            <p>must be activate in config file. </p>
+            <p>Component name: <code> inventory</code>.</p>
+        </article>
+        <article>
+            <h2>Methods</h2>
+            <ul>
+                <li>
+                    <code>getInventoryName():string</code> Get the name of this inventory.
+                </li>
+                <li>
+                    <code>getInventorySize():number</code> Get the number of slots in this inventory.
+                </li>
+                <li>
+                    <code>getSlotStackSize(slot:number):number</code> Get the stack size of the item stack in the specified slot.
+                </li>
+                <li>
+                    <code>getSlotMaxStackSize(slot:number):number</code> Get the maximum stack size of the item stack in the specified slot.
+                </li>
+                <li>
+                    <code>compareStacks(slotA:number, slotB:number):boolean</code> Compare the two item stacks in the specified slots for equality.
+                </li>
+                <li>
+                    <code>transferStack(slotA:number, slotB:number[, count:number=math.huge]):boolean</code> Move up to the specified number of items from the first specified slot to the second.
+                </li>
+                <li>
+                    <code>getStackInSlot(slot:number):table</code> Get a description of the item stack in the specified slot.
+                </li>
+                <li>
+                    <code>getAllStacks():table</code> Get a list of descriptions for all item stacks in this inventory.
+                </li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>copyright 2023 - Documentation</p>
+    </footer>
+</body>
+</html>
