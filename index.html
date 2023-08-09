@@ -3,897 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compte Rendu</title>
+    <title>Documentation</title>
     <link rel="stylesheet" href="./css/styles.css">
-	<link rel="stylesheet" href="./css/prism.css">
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 </head>
 <body>
     <header>
-        <h1>Compte Rendu de l'équipe n°7</h1>
+        <h1>Documentation</h1>
+        <div class="container">
+            <div class="logo">
+                <a href="./index.html"><img src="./images/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section>
-            <h2>I Le Projet :</h2>
-            <p>nous avons construit une petite voiture télécommandée par Bluetooth avec suivi de ligne grâce à un capteur de ligne infrarouge et évitement d'obstacles grâce à un télémêtre à ultrason. Elle peut être contrôlée à distance à partir d'un smartphone via une application.</p>
-			<p>pour se faire nous disposons de :</p>
-			<ul>
-				<li>
-					<h3>HC-05</h3>
-					<p>Le HC-05 est un module Bluetooth qui peut être utilisé pour établir une communication sans fil entre une arduino et un téléphone. Le HC-05 dispose d'une portée de communication allant jusqu'à 10 mètres et est très facile à utiliser avec une interface série simple.</p>
-					<img src="./images/HC-05.png" style="border-radius: 25px;margin-top: 1rem;">
-				</li>
-				<li>
-					<h3>HC-SR04</h3>
-					<p>Le HC-SR04 est un module de capteur à ultrasons qui peut être utilisé pour mesurer la distance avec un objet. Il utilise des signaux ultrasoniques pour détecter la distance avec une précision et une plage de mesure élevée.</p>
-					<img src="./images/HC-SR04.png" style="border-radius: 25px;margin-top: 1rem;">
-				</li>
-				<li>
-					<h3>L298n</h3>
-					<p>Le L298N est un double pont en H qui peut être utilisé pour contrôler la vitesse et la direction des moteurs à courant continu.</p>
-					<img src="./images/L298n.png" style="border-radius: 25px;margin-top: 1rem;">
-				</li>
-				<li>
-					<h3>QTR-3RC</h3>
-					<p>Le QTR-3RC est un capteur de ligne infrarouge qui peut être utilisé pour détecter la présence d'une ligne. Il est composé de trois capteurs infrarouges et dispose d'une interface analogique pour une lecture précise de la position de la ligne.</p>
-					<img src="./images/QTR-3RC.png" style="border-radius: 25px;margin-top: 1rem;">
-				</li>
-				<li>
-					<h3>Arduino UNO Rev3</h3>
-					<p>L'Arduino Uno Rev3 est une carte électronique équipée d'un microcontrôleur. Elle dispose de broches d'entrée/sortie pour communiquer avec différents composants électroniques.</p>
-					<img src="./images/arduino.png" style="border-radius: 25px;margin-top: 1rem;">
-				</li>
-			</ul>
+            <h2>Opencomputer</h2>
+            <p>This mod adds computers that can be programmed in Lua 5.2 and 5.3.</p>
+            <h3>List of component :</h3>
+            <a href=".\page\OpenComputers\printer3d.html">3D Printer</a> - 
+            <a href=".\page\OpenComputers\abstract_bus.html" >Abstract Bus</a> - 
+            <a href=".\page\OpenComputers\access_point.html" >Access Point</a> - 
+            <a href=".\page\OpenComputers\chunkloader.html" >Chunkloader</a> - 
+            <a href=".\page\OpenComputers\computer.html" >Computer</a> - 
+            <a href=".\page\OpenComputers\crafting.html" >Crafting</a> - 
+            <a href=".\page\OpenComputers\data.html" >Data Card</a> - 
+            <a href=".\page\OpenComputers\database.html" >Database</a> - 
+            <a href=".\page\OpenComputers\debug.html" >Debug</a> - 
+            <a href=".\page\OpenComputers\drone.html" >Drone</a> - 
+            <a href=".\page\OpenComputers\drive.html" >Drive</a> - 
+            <a href=".\page\OpenComputers\eeprom.html" >EEPROM</a> - 
+            <a href=".\page\OpenComputers\experience.html" >Experience</a> - 
+            <a href=".\page\OpenComputers\filesystem.html" >Filesystem</a> - 
+            <a href=".\page\OpenComputers\generator.html" >Generator</a> -
+            <a href=".\page\OpenComputers\geolyzer.html" >Geolyzer</a> -
+            <a href=".\page\OpenComputers\gpu.html" >GPU</a> - 
+            <a href=".\page\OpenComputers\hologram.html" >Hologram</a> - 
+            <a href=".\page\OpenComputers\internet.html" >Internet</a> - 
+            <a href=".\page\OpenComputers\inventory_controller.html" >Inventory Controller</a> - 
+            <a href=".\page\OpenComputers\leash.html">Leash</a> - 
+            <a href=".\page\OpenComputers\microcontroller.html" >Microcontroller</a> - 
+            <a href=".\page\OpenComputers\modem.html" >Modem</a> - 
+            <a href=".\page\OpenComputers\motion_sensor.html" >Motion Sensor</a> - 
+            <a href=".\page\OpenComputers\navigation.html" >Navigation</a> - 
+            <a href=".\page\OpenComputers\net_splitter.html" >Net Splitter</a> - 
+            <a href=".\page\OpenComputers\piston.html" >Piston</a> - 
+            <a href=".\page\OpenComputers\redstone.html" >Redstone</a> - 
+            <a href=".\page\OpenComputers\robot.html" >Robot</a> - 
+            <a href=".\page\OpenComputers\screen.html" >Screen</a> - 
+            <a href=".\page\OpenComputers\sign.html" >Sign</a> - 
+            <a href=".\page\OpenComputers\tank_controller.html" >Tank Controller</a> - 
+            <a href=".\page\OpenComputers\tractor_beam.html" >Tractor Beam</a> - 
+            <a href=".\page\OpenComputers\transposer.html" >Transposer</a> - 
+            <a href=".\page\OpenComputers\tunnel.html" >Tunnel</a> - 
+            <a href=".\page\OpenComputers\world_sensor.html" >World Sensor</a>
         </section>
         <section>
-            <h2>II Les Capteur:</h2>
-            <ul>
-				<li>
-					<h3>capteur à infrarouge</h3>
-					<h4>Entrée/Sortie du capteur</h4>
-					<ul>
-						<li>
-							<b>GND</b> : à brancher à la terre. sert à l'alimentation du capteur.
-						</li>
-						<li>
-							<b>VCC</b> : à brancher au 5V de l'arduino. sert à l'alimentation du capteur. 
-						</li>
-						<li>
-							<b>sortie 1</b> : à brancher au A0 de l'arduino. sortie analogique representant le niveaux d'absorption des infrarouges 0 pour une réflexion totale et 1023 pour une absorption totale. 
-						</li>
-						<li>
-							<b>sortie 2</b> : à brancher au A1 de l'arduino. sortie analogique representant le niveau d'absorption des infrarouges 0 pour une réflexion totale et 1023 pour une absorption totale. 
-						</li>
-						<li>
-							<b>sortie 3</b> : à brancher au A2 de l'arduino. sortie analogique représentant le niveau d'absorption des infrarouges 0 pour une réflexion totale et 1023 pour une absorption totale. 
-						</li>
-					</ul>
-					<img src="./images/cablage_QTR-3RC.png" style="border-radius: 25px;margin-top: 1rem;">
-					<h4>Experiences Réalisées</h4>
-					<ul>
-						<li>
-							<p> Nous avons tout d'abord mesuré le capteur afin de s'assurer de ses dimensions : </p>
-							<div style="border-radius: 25px;margin-top: 1rem;display: inline-block;">
-								<img src="./images/EX_IR_SIZE_1.png" style="border-radius: 25px;">
-								<img src="./images/EX_IR_SIZE_2.png" style="border-radius: 25px;">
-							<div>
-							<p style="margin-top: 2rem;margin-bottom: 1rem;"> nos resultats concordent bien avec la <a href="https://www.pololu.com/product/2457">documentation</a> fournie. </p>
-						</li>
-						<li>
-							<p> Nous avons mesuré la distance optimale du capteur avec le sol : </p>
-							<img src="./images/EX_IR_HAUTEUR.png" style="border-radius: 25px;margin-top: 1rem;">
-							<p style="margin-top: 2rem;margin-bottom: 1rem;"> on obtient ce tableau : </p>
-							<table >
-								<tr>
-									<th> hauter </th>
-									<th> 10 </th>
-									<th> 9 </th>
-									<th> 8 </th>
-									<th> 7 </th>
-									<th> 6 </th>
-									<th> 5 </th>
-									<th> 4 </th>
-									<th> 3 </th>
-								</tr>
-                                <tr>
-                                    <th> valeur </th>
-                                    <th> 982 </th>
-                                    <th> 900 </th>
-                                    <th> 910 </th>
-                                    <th> 920 </th>
-                                    <th> 927 </th>
-                                    <th> 900 </th>
-                                    <th> 870 </th>
-                                    <th> 810 </th>
-                                </tr>
-							</table>
-							<p style="margin-top: 2rem;margin-bottom: 1rem;"> Grâce à ce tableau, nous pouvons en déduire que la distance optimale entre le capteur et le sol est <b>6mm.</b> </p>
-						</li>
-						<li>
-							<h4>Code utilisé pour les tests</h4>
-							<pre style="border-radius: 10px;" class ="line-numbers"><code class="language-cpp" >
-int const capteurIR= A0; // permet de donner un nom à une entrée,
- // ce n’est pas obligatoire mais conseillé
-int ValeurIR=0 ; // crée la variable du capteur
-void setup()
-{
- Serial.begin(9600); // définit la vitesse de la liaison série
-}
-void loop()
-{
- Serial.print("Valeur du capteur: "); // envoi du texte sur la liaison série
- ValeurIR = analogRead(capteurIR); //lire l’entrée analogique qui correspond au capteur
- Serial.println(ValeurIR); // envoi la valeur du capteur sur la liaison série
- delay(100);// attente de 100ms entre chaque valeur
- } 
-							</code></pre>
-						</li>
-						<li>
-							<h4>Conclusion des test:</h4>
-							<p>le capteur a les dimensions indiquées sur le doc <b>32 mm × 8 mm × 3 mm</b>, il devra être installé à  <b>6 mm</b> du sol pour un fonctionnement optimal.</p>
-							
-						</li>
-						<li>
-							<h4>Influence:</h4>
-							<img src="./images/algoIR.png" style="border-radius: 25px;">
-						</li>
-					</ul>
-				</li>
-				<li>
-					<h3>capteur à ultrasons</h3>
-					<h4>Entrée/Sortie du capteur</h4>
-					<ul>
-						<li>
-							<b>GND</b> : à brancher à la terre. sert à l'alimentation du capteur.
-						</li>
-						<li>
-							<b>VCC</b> : à brancher au 5V de l'arduino. sert à l'alimentation du capteur. 
-						</li>
-						<li>
-							<b>Trig</b> : à brancher au 5 de l'arduino. entrée digitale, émission de salve ultra-sonor par le capteur lorsque l'état du pin est haut (5V)
-						</li>
-						<li>
-							<b>Echo</b> : à brancher au 4 de l'arduino. sortie digitale, émet un signal électrique quand une salve est reçue.
-						</li>
-					</ul>
-					<img src="./images/cablage_hc-sr04.png" style="border-radius: 25px;margin-top: 1rem;">
-					<h4>Experiences Réalisées</h4>
-					<ul>
-						<li>
-							<h4> nous avons mesuré la distance minimale et maximale de captation : </h4>
-							<div style="border-radius: 25px;margin-top: 1rem;display: inline-block;">
-								<img src="./images/EX_US_DIST_1.png" style="border-radius: 25px;">
-								<img src="./images/EX_US_DIST_2.png" style="border-radius: 25px;">
-							<div>
-							<p>La règle nous permet de trouver la distance minimale de capture : <b>2 cm.</b></p>
-							<p>Le mètre nous permet de trouver la distance maximale de capture : <b>400 cm.</b></p>
-						</li>
-						<li>
-							<h4> nous avons mesuré la distance minimale et maximale de captation : </h4>
-							<div style="border-radius: 25px;margin-top: 1rem;display: inline-block;">
-								<img src="./images/EX_US_ANG_HORIZONTAL.png" style="border-radius: 25px;">
-								<img src="./images/EX_US_ANG_VERTICAL.png" style="border-radius: 25px;">
-							<div>
-							<p>L’angle de détection horizontal est d’environ <b>40 degrés.</b></p>
-							<p>L’angle de détection vertical est d'environ égal à <b>60 degrés.</b></p>
-						</li>
-						<li>
-							<h4>Code utilisé pour les tests</h4>
-							<pre style="border-radius: 10px;" class ="line-numbers"><code class="language-cpp" >
-int const trigPin=5; //Trig
-int const echoPin=4; //Echo
-long duree, distance; // variables pour les calculs
-void setup()
-{
- Serial.begin (9600);
- pinMode(trigPin, OUTPUT); //On défini Trig comme une sortie
- pinMode(echoPin, INPUT); //On défini Echo comme une entrée
-}
-void loop()
-{
- digitalWrite(trigPin, LOW); // On met la sortie trigPin à 0
- delayMicroseconds(2); // attente 2ms
- digitalWrite(trigPin, HIGH); // On met la sortie trigPin à 1
- delayMicroseconds(10); //Trig envois pendant 10ms
- digitalWrite(trigPin, LOW); // On met la sortie trigPin à 0
-
- // On calcul le temps pour l'aller retour du signal
- duree = pulseIn(echoPin, HIGH);
- distance = duree*340/(2*10000);
-
- //Pour le moniteur série
- Serial.print(distance);
- Serial.println(" cm ");
- Serial.print(duree);
- Serial.println(" ms");
- delay(100);
-} 
-							</code></pre>
-						</li>
-						<li>
-							<h4>Conclusion des test:</h4>
-							<p>le capteur à les dimension indiqué sur le doc <b>45 mm × 20 mm × 15 mm</b>, il devra être installé à  <b>la verticale</b> pour un fonctionement optimal.</p>
-							<p>il peut capter des obstacle situé entre <b>2 cm</b> et <b>4 m</b> sur une plage de <b>40°</b> horizontal et <b>60°</b> vertical.
-							
-						</li>
-						<li>
-							<h4>Influence:</h4>
-							<img src="./images/algoUS.png" style="border-radius: 25px;">
-						</li>
-					</ul>
-				</li>
-			</ul>
-            
+            <h2>Opensecurity</h2>
+            <p>This mod adds security oriented components for use with OpenComputers.</p>
+            <h3>List of component :</h3>
+            <a href=".\page\OpenSecurity\os_alarm.html">Alarm</a> - 
+            <a href=".\page\OpenSecurity\os_biometric.html">Biometric Reader</a> - 
+            <a href=".\page\OpenSecurity\os_cardwriter.html">Card Writer</a> - 
+            <a href=".\page\OpenSecurity\os_doorcontroller.html">Door Controller</a> - 
+            <a href=".\page\OpenSecurity\os_energyturret.html">Energy Turret</a> -
+            <a href=".\page\OpenSecurity\os_entdetector.html">Entity Detector</a> - 
+            <a href=".\page\OpenSecurity\os_keypad.html">Keypad</a> - 
+            <a href=".\page\OpenSecurity\os_magreader.html">Magnetic Card Reader</a> - 
+            <a href=".\page\OpenSecurity\os_nanofog_terminal.html">Nano Fog Terminal</a> - 
+            <a href=".\page\OpenSecurity\os_rfidreader.html">RFID reader</a> - 
+            <a href=".\page\OpenSecurity\os_rolldoorcontroller.html">Rolldoor Controller</a> - 
+            <a href=".\page\OpenSecurity\os_securityterminal.html">Security Terminal</a>
         </section>
         <section>
-            <h2>III La carte de puissance</h2>
-			<p>Le driver moteur L298N est une carte d’extension compatible à votre Arduino et qui permet aussi bien de piloter deux moteurs à courant continu que de les alimenter électriquement.</p>
-			<ul>
-				<li>
-					<h3>Entrée/Sortie de la carte</h3>
-					<ul>
-						<li>
-							<ul>
-								<li>
-									ENA: Entrée analogique, permet de régler la vitesse du moteur A.
-								</li>
-								<li>
-									ENB: Entrée analogique, permet de régler la vitesse du moteur B.
-								</li>
-								<li>
-									IN1: Entrée digitale, permet de régler la direction du moteur A.
-								</li>
-								<li>
-									IN2: Entrée digitale, permet de régler la direction du moteur A.
-								</li>
-								<li>
-									IN3: Entrée digitale, permet de régler la direction du moteur B.
-								</li>
-								<li>
-									IN4: Entrée digitale, permet de régler la direction du moteur B.
-								</li>
-
-							</ul>
-						</li>
-						<li>
-							<h4>Le <abbr title="Modulation de Largeur d'Impulsion"> MLI </abbr></h4>
-							<p>Le MLI (Modulation de Largeur d'Impulsion) est une technique pour réguler la tension ou le courant fourni à une charge électrique en modulant la largeur des impulsions d'un signal de commande en fonction d'une tension de référence.</p>
-							<p>ici, on s'en sert pour commander la vitesse des moteur</p>
-							<p>pour s'en servir il faut appeler la fonction <code class="language-cpp">analogWrite(byte pin,int valeur);</code></p>
-						</li>
-						<li>
-							<h4>Tableau de la polarité des broche de sortie en fonction de l'état binaire des entrées digitales </h4>
-							<table>
-								<tr>
-									<th>état logique de IN1</th>
-									<th>0</th>
-									<th>1</th>
-									<th>0</th>
-									<th>1</th>
-									<th>0</th>
-									<th>1</th>
-									<th>0</th>
-									<th>1</th>
-									<th>0</th>
-									<th>1</th>
-									<th>0</th>
-									<th>1</th>
-									<th>0</th>
-									<th>1</th>
-									<th>0</th>
-									<th>1</th>
-								</tr>
-								<tr>
-									<th>état logique de IN2</th>
-									<th>0</th>
-									<th>0</th>
-									<th>1</th>
-									<th>1</th>
-									<th>0</th>
-									<th>0</th>
-									<th>1</th>
-									<th>1</th>
-									<th>0</th>
-									<th>0</th>
-									<th>1</th>
-									<th>1</th>
-									<th>0</th>
-									<th>0</th>
-									<th>1</th>
-									<th>1</th>
-								</tr>
-								<tr>
-									<th>état logique de IN3</th>
-									<th>0</th>
-									<th>0</th>
-									<th>0</th>
-									<th>0</th>
-									<th>1</th>
-									<th>1</th>
-									<th>1</th>
-									<th>1</th>
-									<th>0</th>
-									<th>0</th>
-									<th>0</th>
-									<th>0</th>
-									<th>1</th>
-									<th>1</th>
-									<th>1</th>
-									<th>1</th>
-								</tr>
-								<tr>
-									<th>état logique de IN4</th>
-									<th>0</th>
-									<th>0</th>
-									<th>0</th>
-									<th>0</th>
-									<th>0</th>
-									<th>0</th>
-									<th>0</th>
-									<th>0</th>
-									<th>1</th>
-									<th>1</th>
-									<th>1</th>
-									<th>1</th>
-									<th>1</th>
-									<th>1</th>
-									<th>1</th>
-									<th>1</th>
-								</tr>
-								<tr>
-									<th>polarité de la borne OUT1</th>
-									<th>-</th>
-									<th>+</th>
-									<th>-</th>
-									<th>+</th>
-									<th>-</th>
-									<th>+</th>
-									<th>-</th>
-									<th>+</th>
-									<th>-</th>
-									<th>+</th>
-									<th>-</th>
-									<th>+</th>
-									<th>-</th>
-									<th>+</th>
-									<th>-</th>
-									<th>+</th>
-								</tr>
-								<tr>
-									<th>polarité de la borne OUT2</th>
-									<th>-</th>
-									<th>-</th>
-									<th>+</th>
-									<th>+</th>
-									<th>-</th>
-									<th>-</th>
-									<th>+</th>
-									<th>+</th>
-									<th>-</th>
-									<th>-</th>
-									<th>+</th>
-									<th>+</th>
-									<th>-</th>
-									<th>-</th>
-									<th>+</th>
-									<th>+</th>
-
-								</tr>
-								<tr>
-									<th>polarité de la borne OUT3</th>
-									<th>-</th>
-									<th>-</th>
-									<th>-</th>
-									<th>-</th>
-									<th>+</th>
-									<th>+</th>
-									<th>+</th>
-									<th>+</th>
-									<th>-</th>
-									<th>-</th>
-									<th>-</th>
-									<th>-</th>
-									<th>+</th>
-									<th>+</th>
-									<th>+</th>
-									<th>+</th>
-								</tr>
-								<tr>
-									<th>polarité de la borne OUT4</th>
-									<th>-</th>
-									<th>-</th>
-									<th>-</th>
-									<th>-</th>
-									<th>-</th>
-									<th>-</th>
-									<th>-</th>
-									<th>-</th>
-									<th>+</th>
-									<th>+</th>
-									<th>+</th>
-									<th>+</th>
-									<th>+</th>
-									<th>+</th>
-									<th>+</th>
-									<th>+</th>
-								</tr>
-								<tr>
-									<th>sens de rotation du moteur A</th>
-									<th>=</th>
-									<th>></th>
-									<th><</th>
-									<th>=</th>
-									<th>=</th>
-									<th>></th>
-									<th><</th>
-									<th>=</th>
-									<th>=</th>
-									<th>></th>
-									<th><</th>
-									<th>=</th>
-									<th>=</th>
-									<th>></th>
-									<th><</th>
-									<th>=</th>
-								</tr>
-								<tr>
-									<th>sens de rotation du moteur B</th>
-									<th>=</th>
-									<th>=</th>
-									<th>=</th>
-									<th>=</th>
-									<th>></th>
-									<th>></th>
-									<th>></th>
-									<th>></th>
-									<th><</th>
-									<th><</th>
-									<th><</th>
-									<th><</th>
-									<th>=</th>
-									<th>=</th>
-									<th>=</th>
-									<th>=</th>
-								</tr>
-							</table>
-						</li>
-						<li>
-							<h4>câblage</h4>
-							<img src="./images/cablage_l298n.png" style="border-radius: 25px;margin-top: 1rem;">
-						</li>
-					</ul>
-				</li>
-				<li>
-					<h3>Code</h3>
-					<p>pour une integration plus facile, nous avons écrit une librairie</p>
-					<pre style="border-radius: 10px;" class="line-numbers"><code class="language-cpp">
-//fichier moteur.h
-#ifndef MOTOR_H
-#define MOTOR_H
-
-#include "Arduino.h"
-
-class Motor
-{ // on crée un nouvel objet
-  public: // on mettra ici tous les éléments accessibilité au public
-    Motor(byte, byte, byte, byte, byte, byte);
-
-    void setVitesseA(int);
-    void setVitesseB(int);
-
-    int getVitesseA();
-    int getVitesseB();
-
-    void setDirectionA(bool);
-    void setDirectionB(bool);
-
-    bool getDirectionA();
-    bool getDirectionB();
-    
-  private: // et ici tous les éléments accessibles uniquement en privé
-    bool directionA = 0, directionB = 0; // pour stocker les directions
-    
-    int vitesseA = 0,vitesseB = 0; // pour stocker les vitesses
-    
-    byte ENA = 0, ENB = 0, IN1 = 0, IN2 = 0, IN3 = 0, IN4 = 0; // pour stocker les pin
-};
-
-#endif
-					</code></pre>
-					<pre style="border-radius: 10px;" class="line-numbers"><code class="language-cpp">
-//fichier moteur.cpp
-#include "Arduino.h"
-#include "Motor.h"
-
-// Pin
-Motor::Motor(byte ena, byte in1, byte in2, byte in3, byte in4, byte enb)
-{
-  ENA = ena;
-  IN1 = in1;
-  IN2 = in2;
-  ENB = enb;
-  IN3 = in3;
-  IN4 = in4;
-            
-  pinMode(ENA,OUTPUT);
-  pinMode(ENB,OUTPUT);
-  pinMode(IN1,OUTPUT);
-  pinMode(IN2,OUTPUT);
-  pinMode(IN3,OUTPUT);
-  pinMode(IN4,OUTPUT);
-
-  digitalWrite(ENA, LOW);
-  digitalWrite(ENB, LOW);
-  
-  digitalWrite(IN1, HIGH);
-  digitalWrite(IN2, LOW);
-  digitalWrite(IN3, HIGH);
-  digitalWrite(IN4, LOW);
-}
-
-//Vitesse moteur A
-void Motor::setVitesseA(int val)
-{
-  vitesseA = val;
-  analogWrite(ENA, vitesseA);
-}
-
-//Vitesse moteur B
-void Motor::setVitesseB(int val)
-{
-  vitesseB = val;
-  analogWrite(ENB, vitesseB);
-}
-
-
-//Vitesse moteur A
-int Motor::getVitesseA()
-{
-  return vitesseA;
-}
-
-//Vitesse moteur B
-int Motor::getVitesseB()
-{
-  return vitesseB;
-}
-
-
-
-// Direction moteur A
-void Motor::setDirectionA(bool val)
-{
-  directionA = val;
-  digitalWrite(IN1, directionA);
-  digitalWrite(IN2, !directionA);
-}
-
-// Direction moteur B
-void Motor::setDirectionB(bool val)
-{
-  directionB = val;
-  digitalWrite(IN3, directionB);
-  digitalWrite(IN4, !directionB);
-}
-
-
-// Direction moteur A
-bool Motor::getDirectionA()
-{
-  return directionA;
-}
-
-// Direction moteur B
-bool Motor::getDirectionB()
-{
-  return directionB;
-}
-					</code></pre>
-					<pre style="border-radius: 10px;" class="line-numbers"><code class="language-cpp">
-//fichier main.ino
-#include "motor.h"
-
-Motor mt(5,6,7,8,9,10);
-
-void setup() {
-  Serial.begin(9600);
-}
-
-void loop() {
-  mt.setVitesseA(input("Vitesse A: [0-255] "));
-  mt.setVitesseB(input("Vitesse B: [0-255] "));
-  mt.setDirectionA(input("Direction A: [0-1] ") == 1);
-  mt.setDirectionB(input("Direction B: [0-1] ") == 1);
-}
-
-int input(String ask){
-  Serial.println(ask);
-  while(Serial.available() <= 0){delay(10);}
-  return Serial.readString().toInt();
-}
-
-					</code></pre>
-				</li>
-				<li>
-					<h3>Experience</h3>
-					<ul>
-						<li>
-							<p>nous avons commencé par mesurer les côtés du L298N </p>
-							<img src="./images/EX_MT_SIZE.png" style="border-radius: 25px;margin-top: 1rem;">
-						</li>
-						<li>
-							<p>puis la vitesse de rotation des moteurs selon l’intensité qu’ils reçoivent grâce à un tachymètre </p>
-							<img src="./images/EX_MT_SPEED.png" style="border-radius: 25px;margin-top: 1rem;">
-						</li>
-						<li>
-							<h4>conclusion des tests</h4>
-							<ul>
-								<li>
-									<p>la carte à bien pour dimensions <b> 44 mm x 44 mm </b>. </p>
-								</li>
-                                <li>
-                                    <p>d'après nos mesures, on obtient les graphiques suivants :</p>
-                                    <img src="./images/Vitesse (RPM) par rapport à U (V).png" style="border-radius: 25px;margin-top: 1rem;">
-									<img src="./images/U (V) par rapport à PWM.png" style="border-radius: 25px;margin-top: 1rem;">
-                                </li>
-								<li>
-									<p>on peut en déduire : </p>
-									<img src="./images/MT_RESULT.png" style="border-radius: 25px;margin-top: 1rem;">
-								</li>	
-							</ul>
-						</li>
-					</ul>
-				</li>
-			</ul>
+            <h2>Draconic Evolution</h2>
+            <p>This is a mod that adds a lot of high-tier items such as tools and armor as well as some high-tier energy storage and a lot of other random features</p>
+            <h3>List of component :</h3>
+            <a href=".\page\DraconicEvolution\reactor.html">Draconic Reactor</a> -
+            <a href=".\page\DraconicEvolution\storage.html" >Draconic RF Storage</a> -
+            <a href=".\page\DraconicEvolution\flux_gate.html">Flux gate</a>
         </section>
-		<section>
-			<h2>IV La Radio-commande</h2>
-			<ul>
-				<li>
-					<h2>Le Bleutooth</h2>
-					<p>Le Bluetooth est une technologie de communication sans fil qui utilise des ondes radio pour transmettre des données et des informations entre les appareils. le Bluetooth peut être utilisé pour contrôler et piloter des appareils à distance, tels que des drones ou des voitures télécommandées.</p>
-				</li>
-				<li>
-					<h3>Le module HC-05</h3>
-					<p>Le module HC-05 est un module Bluetooth qui permet de communiquer avec un autre appareil Bluetooth. Il est possible de le connecter à un Arduino pour contrôler un robot ou un drone à distance.</p>
-					<ul>
-						<li>
-							<h4>cablage</h4>
-							<img src="./images/cablage_hc-05.png" style="border-radius: 25px;margin-top: 1rem;">
-						</li>
-						<li>
-							<h4>code des tests</h4>
-							<pre style="border-radius: 10px;" class ="line-numbers"><code class="language-cpp">
-#include &lt;SoftwareSerial.h&gt;
-
-SoftwareSerial BTserial(2, 3); // RX | TX
-
-bool IRActive = false;
-
-void setup() {
-  Serial.begin(9600);
-  BTserial.begin(38400);
-
-  randomSeed(analogRead(0));
-}
-
-void loop() {
-  delay(random(100)); // simulation du temp prix par un autre programe ex: lecture de capteur.
-  ecouter();
-}
-
-void ecouter(){
-  bool premierNombreEstNegatif = false;
-  bool secondNombreEstNegatif = false;
-  String representationPremierNombre = "";
-  String representationSecondNombre = "";
-  unsigned long currentMillis = millis();
-  char bt = ' ';
-  while (BTserial.available() <= 14) { // on attend d'etre sur d'avoir au moins un message complet.
-    if((millis() - currentMillis) > 500){ // si on attend plus de 0.5s
-      return; // alors on s'arrete
-    }
-  }
-  while (BTserial.available() > 0) { // tant qu'on a des donné a analiser
-    char c = BTserial.read(); // on les recupere
-    if (c == ';') { // on cherche une fin de transmition
-      bt = BTserial.read();                              // ----------------------------------------------------------------------------------------------------------------------------------
-      representationPremierNombre += (char)BTserial.read();// on lit le message selon la forme X X X X X X ;
-      representationPremierNombre += (char)BTserial.read();//                                  ^  ^  ^  ^  ^
-      secondNombreEstNegatif = BTserial.read() == '1';    //                                  |  |  |  |  |
-      representationSecondNombre += (char)BTserial.read();//                                 (1)(2)(3)(4)(5)
-      representationSecondNombre += (char)BTserial.read();// (1) signe du nb 1 ; (2) valeur absolue de nb 1 ; (3) signe du nb 2 ; (4) valeur absolue de nb 2 ; (5) pour delimité les paket :)
-                                                          // ----------------------------------------------------------------------------------------------------------------------------------
-      if(bt == '2'){
-        IRActive = !IRActive;
-        Serial.println(IRActive ? "IR activé" : "IR desactivé"); // juste pour les log 
-        return;
-      }
-      premierNombreEstNegatif = bt == '1'; 
-      int premierNombre = (int) strtol( &representationPremierNombre[0], NULL, 16); //convertion de representation de nombre hexadecimal en nombre
-      int secondNombre = (int) strtol( &representationSecondNombre[0], NULL, 16); //idem
-      
-      Serial.println("A: " + String(premierNombreEstNegatif ? premierNombre*-1 : premierNombre) + " B: " + String(secondNombreEstNegatif ? secondNombre*-1 : secondNombre)); // juste pour les log 
-      return;
-    }
-  } 
-}
-								</code></pre>
-						</li>
-					</ul>
-					
-				</li>
-				<li>
-					<h3>L'Application</h3>
-					<p>nous avons réalisé l'app sur Android Studion un environnement de développement intégré (IDE) officiel pour la création d'applications mobiles Android, créé par Google. Il fournit un ensemble d'outils puissants pour les développeurs d'applications Android, tels que des éditeurs de code, des outils de débogage, des émulateurs, des profilers, des outils de test et bien plus encore. </p>
-					<img src="./images/Screenshot_app.png" style="border-radius: 25px;margin-top: 1rem;">
-					<ul>
-						<li>
-							<h4>fonctionnalité</h4>
-							<ul>
-								<li>connexion au robot</li>
-								<li>contrôle du robot</li>
-								<li>arrêt/lancement du mode IR</li>
-							</ul>
-						</li>
-						<li>
-							<h4>code</h4>
-							<p>pour des raison de lisibilité on ne parlera pas de tout le code de l'app ici.</p>
-							<pre style="border-radius: 10px;" class ="line-numbers"><code class="language-java">
-//l'extrait qui suit est le code de l'application android qui permet de piloter le robot avec le joystick
-final JoystickView joystickRight = findViewById(R.id.joystickView_right);
-joystickRight.setOnMoveListener((angle, strength) -> {
-	mTextViewAngleRight.setText(angle + "°");
-	mTextViewStrengthRight.setText(strength + "%");
-	int VitesseA = angleToSpeed(angle)*strength/100;
-	int VitesseB = angleToSpeed(angle-90)*strength/100;
-	mTextViewSpeedA.setText("A: "+ VitesseA);
-	mTextViewSpeedB.setText("B: "+ VitesseB);
-	if ( bluetoothClient == null ) return;
-		String msg ="";
-	if(VitesseA >= 0){
-		msg = msg+'0';
-		msg = msg + String.format("%02X", VitesseA);
-	}else{
-		msg = msg+'1';
-		msg = msg + String.format("%02X", VitesseA*-1);
-	}
-	if(VitesseB >= 0){
-		msg = msg+'0';
-		msg = msg + String.format("%02X", VitesseB);
-	}else{
-		msg = msg+'1';
-		msg = msg + String.format("%02X", VitesseB*-1);
-	}
-	msg = msg+';';
-	bluetoothClient.writeString( msg);
-});
-
-private int angleToSpeed(int angle){
-	if(angle < 0){
-		angle+=360;
-	}
-    if(angle<90){ return 255;
-				  }else if(angle < 180){
-        return (angle - 90) * -510 / 90 + 255; //(x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min avec x = angle, in_min = 90 , in_max = 180 , out_min = 255 et out_max = -255 => fonction map de arduino.h
-    }else if(angle < 270){
-        return -255;
-    }else{
-		return (angle - 270) * 510 / 90 - 255; //(x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min avec x = angle, in_min = 270 , in_max = 360 , out_min = -255 et out_max = 255 => fonction map de arduino.h
-    }
-}
-								</code>
-							</pre>
-							<pre style="border-radius: 10px;" class ="line-numbers"><code class="language-java">
-//l'extrait qui suit est le code de l'application android qui permet d'activer ou désactiver le mode de suivie de ligne
-Button button = (Button) findViewById(R.id.button);
-button.setOnClickListener(v -> {
-	if ( bluetoothClient == null ) return;
-	bluetoothClient.writeString( "200000;200000;200000;");// on envoie trois fois la même commande pour être sur que le robot la recoive
-});
-								</code>
-							</pre>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<h4>Protocole</h4>
-					<p>ce protocole est constitué de packet conposé de 7 octets, le premier octet indique si un bouton est appuyé ou la direction du moteur A, si le premier octet représente la direction du moteur A alors le deuxième et troisième octet représentent la vitesse du moteur A au format hexadécimal tandis que le quatrième indique la direction du moteur B et les cinq et sixième octet représentent la vitesse du moteur B au format hexadécimal. le septième octet est un octet de fin de packet.</p>
-					<img src="./images/protocol.png" style="border-radius: 25px;margin-top: 1rem;">
-				</li>
-			</ul>
-		</section>
-		<section>
-            <h2>V La voiture</h2>
-            <p> une description du gabarit </P>
-			<ul>
-				<li>
-					<h3>Positionement des moteurs</h3>
-					<p>Les moteurs sont placés au centre de la voiture, aux bords gauche et droit.</p>
-					<img src="./images/VT_MT_POS.png" style="border-radius: 25px;margin-top: 1rem;">
-				</li>
-				<li>
-					<h3>Positionement du L298n</h3>
-					<p>bla bla bla</p>
-					<img src="./images/VT_L298n_POS.png" style="border-radius: 25px;margin-top: 1rem;">
-				</li>
-				<li>
-					<h3>Positionement de l'arduino</h3>
-					<p>bla bla bla</p>
-					<img src="./images/VT_INO_POS.png" style="border-radius: 25px;margin-top: 1rem;">
-				</li>
-				<li>
-					<h3>Positionement du QTR-3RC</h3>
-					<p>L'infrarouge est positionné à 6mm du sol à l'aide d'une pièce réglable constituée de deux parties:
-					une fixée au chassis à l'aide de deux vis </p>
-					
-					<iframe src="https://www.viewstl.com/?embedded&url=https%3A%2F%2Fraw.githubusercontent.com%2FGrahmindol%2FGrahmindol.github.io%2Fd257a6d81b4dd526c86e819c4a31541de5f9478c%2Fobj%2FIR_1_STL.STL&color=violet&bgcolor=transparent&noborder=yes&shading=flat&rotation=no" style="border:0;margin:0;width:550px;height:550px;"></iframe>					
-					
-					<p>et une autre contenant l'infrarouge, reliée à la première à l'aide de vis, </p>
-					
-					<iframe src="https://www.viewstl.com/?embedded&url=https%3A%2F%2Fraw.githubusercontent.com%2FGrahmindol%2FGrahmindol.github.io%2Fd257a6d81b4dd526c86e819c4a31541de5f9478c%2Fobj%2FIR_0_STL.STL&color=violet&bgcolor=transparent&noborder=yes&shading=flat&rotation=no" style="border:0;margin:0;width:550px;height:550px;"></iframe>					
-
-					<p>formant un assemblage de longueur variable.<br>
-					Cette configuration permet un réglage facile et une éventuelle correction de la distance
-					de l'infrarouge par rapport au sol si besoin</p>
-					<img src="./images/VT_QTR-3RC_POS.png" style="border-radius: 25px;margin-top: 1rem;">
-				</li>
-				<li>
-					<h3>Positionement du HC-SR04</h3>
-					<p>Le capteur à ultrasons est fixé avec une pièce de façon à ce qu'il soit placé perpendiculerement au sol, à une hauteur suffisamment petite pour pouvoir détecter les obstacles devant lui.</p>
-					
-					<iframe src="https://www.viewstl.com/?embedded&url=https%3A%2F%2Fraw.githubusercontent.com%2FGrahmindol%2FGrahmindol.github.io%2Fd257a6d81b4dd526c86e819c4a31541de5f9478c%2Fobj%2FUS_STL.STL&color=violet&bgcolor=transparent&noborder=yes&shading=flat&rotation=no" style="border:0;margin:0;width:550px;height:550px;"></iframe>					
-
-					<img src="./images/VT_HC-SR04_POS.png" style="border-radius: 25px;margin-top: 1rem;">
-				</li>
-				<li>
-					<h3>Positionement du HC-05</h3>
-					<p>Le HC-05 recevant les signaux Bluetooth, est protégé par un support ouvert sur le dessus. Il est placé à l'arrière de la voiture.</p>
-					
-					<iframe src="https://www.viewstl.com/?embedded&url=https%3A%2F%2Fraw.githubusercontent.com%2FGrahmindol%2FGrahmindol.github.io%2Fd257a6d81b4dd526c86e819c4a31541de5f9478c%2Fobj%2FBT_STL.STL&color=violet&bgcolor=transparent&noborder=yes&shading=flat&rotation=no" style="border:0;margin:0;width:550px;height:550px;"></iframe>					
-					
-					<img src="./images/VT_HC-05_POS.png" style="border-radius: 25px;margin-top: 1rem;">
-				</li>
-				<li>
-					<h3>Positionement des piles</h3>
-					<p>Les piles sont positionnées sur le chassis de façon verticale à l'aide d'un support conçu à cet effet. </p>
-					
-					<iframe src="https://www.viewstl.com/?embedded&url=https%3A%2F%2Fraw.githubusercontent.com%2FGrahmindol%2FGrahmindol.github.io%2Fd257a6d81b4dd526c86e819c4a31541de5f9478c%2Fobj%2FBAT_STL.STL&color=violet&bgcolor=transparent&noborder=yes&shading=flat&rotation=no" style="border:0;margin:0;width:550px;height:550px;"></iframe>
-					
-					<p> Sur celui-ci, nous avons placé les piles verticalement afin d’obtenir un gain 
-					de place pour les autres éléments de la voiture. La face supérieure des piles est placée à l'air
-					libre pour un accès facile aux branchements, pour recharger facilement la pile si besoin.
-					Le support est directement fixé au châssis à l’aide de deux vis.</p>
-					<img src="./images/VT_BAT_POS.png" style="border-radius: 25px;margin-top: 1rem;">
-				</li>
-			</ul>
-		</section>
-		<section>
-            <h2>VI Conclusion</h2>
-            <ul>
-				<li>
-					<h3>Algorithme</h3>
-					<img src="./images/Algo_Complet.png" style="border-radius: 25px;margin-top: 1rem;">
-					<div class="algo start">
-						cc
-					</div>
-				</li>
-				<li>
-					<h3>Code</h3>
-					<pre style="border-radius: 10px;" class ="line-numbers"><code class="language-cpp">
-// le programme complet du robot
-					</code></pre>		
-				</li>
-				<li>
-					<h3>Schéma complet</h3>
-					<img src="./images/Schema_Complet.png" style="border-radius: 25px;margin-top: 1rem;">
-				</li>
-			</ul>
+        <section>
+            <h2>Applied Energistics</h2>
+            <p>This is a mod which contains a large amount of new content, mostly centered around the concept of using Energy, and the Transformation of Energy in a unique way. Most features relate, or are part of the core mechanic, the ME Network.</p>
+            <h3>List of component :</h3>
+            <a href=".\page\appeng\me_interface.html">Interface</a> -
+            <a href=".\page\appeng\me_controller.html">Controller</a> -
+            <a href=".\page\appeng\me_exportbus.html">Export Bus</a> -
+            <a href=".\page\appeng\me_importbus.html">Import Bus</a>
+        </section>
+        <section>
+            <h2>Extreme reactor</h2>
+            <p>This is the original port of the 1.7.10 mod Big Reactors, by Erogenous Beef, rewritten for MC 1.9.4 / 1.10.x / 1.11 / 1.12.2</p>
+            <h3>List of component : </h3>
+            <a href=".\page\ExtremReactor\reactor.html">reactor</a> -
+            <a href=".\page\ExtremReactor\turbine.html">turbine</a>
+        </section>
+        <section>
+            <h2>Openlight</h2>
+            <p>This addon for OpenComputers adds a light block that you can set the color/brightness on from OpenComputers.</p>
+            <h3>List of component : </h3>
+            <a href=".\page\OpenLight\openlight.html">light</a>
+        </section>
+        <section>
+            <h2>Openprinter</h2>
+            <p>This mod adds a Printer, File Cabinet and Shredder to OpenComputers for 1.6 to 1.12.2</p>
+            <h3>List of component :</h3>
+            <a href=".\page\OpenPrinter\openprinter.html">Printer</a>
+        </section>
+        <section>
+            <h2>Thut's Elevators</h2>
+            <p>This mod adds dynamic elevators to minecraft.  It currently has support for up to 64 floors, with many controllers per floor, so long as they are directly touching each other.</p>
+            <h3>List of component :</h3>
+            <a href=".\page\ThutElevators\lift.html">Elevators</a>
+        </section>
+        <section>
+            <h2>Minecraft</h2>
+            <p>This is just the game without additions</p>
+            <h3>List of component :</h3>
+            <a href=".\page\Minecraft\beacon.html">Beacon</a> -
+            <a href=".\page\Minecraft\brewing_stand.html">Brewing stand</a> -
+            <a href=".\page\Minecraft\command_block.html">Command block</a> -
+            <a href=".\page\Minecraft\comparator.html">Comparator</a> -
+            <a href=".\page\Minecraft\fluid_handler.html">Fluid handler</a> -
+            <a href=".\page\Minecraft\fluid_tank.html">Fluid tank</a> -
+            <a href=".\page\Minecraft\furnace.html">Furnace</a> -
+            <a href=".\page\Minecraft\inventory.html">Inventory</a> -
+            <a href=".\page\Minecraft\mob_spawner.html">Mob spawner</a> -
+            <a href=".\page\Minecraft\note_block.html">Note block</a> -
+            <a href=".\page\Minecraft\jukebox.html">Jukebox</a>
         </section>
     </main>
     <footer>
-        <p>Compte-rendu de l'équipe n°7</p>
+        <p>copyright 2023 - Documentation</p>
     </footer>
-	<script src="./js/prism.js"></script>
 </body>
 </html>
