@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="./../../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Component :  Tunnel</h1>
+        <div>
+            <div>
+                <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./../../index.html">Home</a></li>
+                    <li><a href="./../../about.html">About</a></li>
+                    <li><a href="./../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Description</h2>
+            <p>This component is provided by the linked card.</p>
+            <p>This card is similar to the network card's component, but as it is only point-to-point, no ports can be configured, and the connection is always open.</p>
+            <p>Component name: <code> tunnel</code>.</p>
+        </article>
+        <article>
+            <h2>Methods</h2>
+            <ul>
+                <li>
+                    <code>send(data...)</code> Sends the specified data to the card this one is linked to.
+                </li>
+                <li>
+                    <code>maxPacketSize():number</code> Gets the maximum packet size (config setting).
+                </li>
+                <li>
+                    <code>getChannel():string</code> Gets the tunnel address of the link card. This is also available in linkChannel using an inventory controller and getting the stack from an inventory slot.
+                </li>
+                <li>
+                    <code>getWakeMessage():string</code> Gets the current wake-up message. When the network card detects the wake message (a string in the first argument of a network packet), on any port and the machine is off, the machine is started. This is the same functionality also provided by robots, cases, servers, drones, and tablets.
+                </li>
+                <li>
+                    <code>setWakeMessage(message: string, [fuzzy: boolean]):string</code> Sets the wake-up message to the specified string. The message matching can be fuzzy (default is false). A fuzzy match ignores additional trailing arguments in the network packet.
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>Events</h2>
+            <ul>
+                <li>
+                    <code>modem_message(receiverAddress: string, senderAddress: string, port: number, distance: number, ...)</code> <p>This signal is queued by network cards (including wireless ones) when they receive a message on an open port. </p> <br />
+                    <code>receiverAddress</code> is the address of the network card that received the message.<br />
+                    <code>senderAddress</code> is the address from where the message was sent.<br />
+                    <code>port</code> is the port on which the message was received.<br />
+                    <code>distance</code> is the distance only set when receiving wireless network messages.<br />
+                    <code>All further parameters</code> are user defined and correspond to what the sender specified in tunnel.send()  as the message's payload.<br />
+                </li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>copyright 2023 - Documentation</p>
+    </footer>
+</body>
+</html>

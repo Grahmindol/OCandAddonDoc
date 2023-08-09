@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="./../../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Component : Sign</h1>
+        <div>
+            <div>
+                <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./../../index.html">Home</a></li>
+                    <li><a href="./../../about.html">About</a></li>
+                    <li><a href="./../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Description</h2>
+            <p>This is the component provided by the Sign upgrade.</p>
+            <p>Component name: <code> sign</code>.</p>
+        </article>
+        <article>
+            <h2>Methods</h2>
+            <ul>
+                <li>
+                    <code>getValue(): string or nil, string</code> Gets the text currently displayed on the sign in front of the robot, or nil and an error message if there is no sign in front of the robot.
+                </li>
+                <li>
+                    <code>setValue(value: string): string or nil, string</code> Sets the text of the sign in front of the robot. Returns the new text on the sign (which may be a truncated version of the passed argument) or nil and an error message if there is no sign in front of the robot.
+                </li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>copyright 2023 - Documentation</p>
+    </footer>
+</body>
+</html>

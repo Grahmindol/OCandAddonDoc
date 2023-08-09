@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="./../../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Component : Screen</h1>
+        <div>
+            <div>
+                <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./../../index.html">Home</a></li>
+                    <li><a href="./../../about.html">About</a></li>
+                    <li><a href="./../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Description</h2>
+            <p>This component is provided by screen blocks (either when placed in the world or when installed in a robot).</p>
+            <p>Component name: <code> screen</code>.</p>
+        </article>
+        <article>
+            <h2>Methods : tier one and two</h2>
+            <ul>
+                <li>
+                    <code>isOn():boolean</code> Returns whether the screen is currently on.
+                </li>
+                <li>
+                    <code>turnOn():boolean</code> Turns the screen on. Returns true if it was off.
+                </li>
+                <li>
+                    <code>turnOff():boolean</code> Turns off the screen. Returns true if it was on.
+                </li>
+                <li>
+                    <code>getAspectRatio():number, number</code> The aspect ratio of the screen. For multi-block screens this is the number of blocks, horizontal and vertical.
+                </li>
+                <li>
+                    <code>getKeyboards():table</code> The list of keyboards attached to the screen.
+                </li>
+                <li>
+                    <code>setTouchModeInverted(enabled:boolean):boolean</code> Sets Inverted Touch mode (Sneak-activate opens GUI if set to true).
+                </li>
+                <li>
+                    <code>isTouchModeInverted():boolean</code> Check to see if Inverted Touch mode is enabled (Sneak-activate opens GUI is set to true).
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>Methods : tier three</h2>
+            <ul>
+                <li>
+                    <code>setPrecise(enabled:boolean):boolean</code> Set whether to use high-precision mode (sub-pixel mouse event position).
+                </li>
+                <li>
+                    <code>isPrecise():boolean</code> Check whether high-precision mode is enabled (sub-pixel mouse event position).
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>Events</h2>
+            <ul>
+                <li>
+                    <code>screen_resized(screenAddress: string, newWidth: number, newHeight: number) </code> This signal is queued by screens when their resolution changes, for example because it was manually set via a GPU. <br />
+                    <code>screenAddress</code> is the address of the screen that changed resolution. <br />
+                    <code>newWidth</code> is the new width of the screen. <br />
+                    <code>newHeight</code> is the new height of the screen.
+                </li>
+                <li>
+                    <code>touch(screenAddress: string, x: number, y: number, button: number, playerName: string) </code> This signal is queued by screens of tier two and tier three when they are clicked. This includes left clicks in the GUI (i.e. when a keyboard is attached) or when right-clicking/activating them in the world directly (i.e. when no keyboard is attached or when sneak-activating).<br />
+                    <code>screenAddress</code> is the address of the screen that was clicked. <br />
+                    <code>x</code> is the x coordinate of the click, in pixels. <br />
+                    <code>y</code> is the y coordinate of the click, in pixels. <br />
+                    <code>button</code> is the mouse's button that was clicked. <br />
+                    <code>playerName</code> is the name of the player that clicked the screen.
+                </li>
+                <li>
+                    <code>drag(screenAddress: string, x: number, y: number, button: number, playerName: string) </code> This signal is almost equivalent to the touch signal. The only difference is the implicit meaning: when this signal is fired, it “belongs” to a touch signal that was fired earlier. This can only be triggered by dragging in the GUI.<br />
+                    <code>screenAddress</code> is the address of the screen that was clicked. <br />
+                    <code>x</code> is the x coordinate of the click, in pixels. <br />
+                    <code>y</code> is the y coordinate of the click, in pixels. <br />
+                    <code>button</code> is the mouse's button that was clicked. <br />
+                    <code>playerName</code> is the name of the player that clicked the screen.
+                </li>
+                <li>
+                    <code>drop(screenAddress: string, x: number, y: number, button: number, playerName: string) </code> This signal is triggered when the player releases the mouse button after a touch signal. Despite the name, it does not necessarily follow a drag signal.<br />
+                    <code>screenAddress</code> is the address of the screen that was clicked. <br />
+                    <code>x</code> is the x coordinate of the click, in pixels. <br />
+                    <code>y</code> is the y coordinate of the click, in pixels. <br />
+                    <code>button</code> is the mouse's button that was clicked. <br />
+                    <code>playerName</code> is the name of the player that clicked the screen.
+                </li>
+                <li>
+                    <code>scroll(screenAddress: string, x: number, y: number, direction: number, playerName: string) </code> This signal is queued by screens of tier two and tier three when the player uses the mouse wheel in the GUI.
+                    <code>screenAddress</code> is the address of the screen that was clicked. <br />
+                    <code>x</code> is the x coordinate of cursor location when the scroll occurred, in pixels. <br />
+                    <code>y</code> is the y coordinate of cursor location when the scroll occurred, in pixels. <br />
+                    <code>direction</code> is the direction of the scroll. <br />
+                    <code>playerName</code> is the name of the player that clicked the screen.
+                </li>
+                <li>
+                    <code>walk(screenAddress: string, x: number, y: number[, playerName: string]) </code> This signal is queued by screens of tier two and tier three when a player or other entity walks on them.
+                    <code>screenAddress</code> is the address of the screen that was clicked. <br />
+                    <code>x</code> is the x coordinate of the sub-block of the multi-block screen that queued the event <br />
+                    <code>y</code> is the y coordinate of the sub-block of the multi-block screen that queued the event <br />
+                    <code>playerName</code> is the name of the player that walked on the screen.
+                </li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>copyright 2023 - Documentation</p>
+    </footer>
+</body>
+</html>

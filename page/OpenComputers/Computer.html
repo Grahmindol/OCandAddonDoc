@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>computer</title>
+    <link rel="stylesheet" href="./../../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Component : Computer</h1>
+        <div>
+            <div>
+                <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./../../index.html">Home</a></li>
+                    <li><a href="./../../about.html">About</a></li>
+                    <li><a href="./../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Description</h2>
+            <p>Computers provide a couple of API callbacks. Note that these can only be called by the computer itself, or its direct neighbors (i.e. other computers that share a face with that computer). Also note that since robots cannot interact with external components they cannot start/stop/query computers, but computers can interact with robots sitting next to them.</p>
+            <p>Component name: <code> computer. </code></p>
+        </article>
+        <article>
+            <h2>Methods</h2>
+            <ul>
+                <li>
+                    <code>start(): boolean</code> Tries to start the computer. Returns true on success, false otherwise. Note that this will also return false if the computer was already running. If the computer is currently shutting down, this will cause the computer to reboot instead.
+                </li>
+                <li>
+                    <code>stop(): boolean</code> Tries to stop the computer. Returns true on success, false otherwise. Also returns false if the computer is already stopped.
+                </li>
+                <li>
+                    <code>isRunning(): boolean</code> Returns whether the computer is currently running.
+                </li>
+                <li>
+                    <code>beep([frequency:number[, duration:number]])</code> Plays a tone, useful to alert users via audible feedback. Supports frequencies from 20 to 2000Hz, with a duration of up to 5 seconds.
+                </li>
+                <li>
+                    <code>getDeviceInfo(): table</code> Returns a table of device information. Note that this is architecture-specific and some may not implement it at all.
+                </li>
+                <li>
+                    <code>crash(reason: string)</code>Attempts to crash the computer for the specified reason.
+                </li>
+                <li>
+                    <code>getArchitecture(): string</code> Returns the computer's current architecture.
+                </li>
+                <li>
+                    <code>isRobot(): boolean</code> Returns whether or not the computer is, in fact, a robot.
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>Events</h2>
+            <ul>
+                <li>
+                    <code>component_added(address: string, componentType: string)</code> <p>This signal is queued by the computer or robot when a new component is attached to it. </p> <br />
+                    <p>address is the address of the added component</p> <br />
+                    <p>componentType is the type of the component</p> 
+                </li>
+                <li>
+                    <code>component_removed(address: string, componentType: string)</code> <p>This signal is queued by the computer or robot when a new component is removed from it. </p> <br />
+                    <p>address is the address of the added component</p> <br />
+                    <p>componentType is the type of the component</p>
+                </li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>copyright 2023 - Documentation</p>
+    </footer>
+</body>
+</html>

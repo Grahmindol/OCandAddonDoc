@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="./../../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Component : Filesystem</h1>
+        <div>
+            <div>
+                <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./../../index.html">Home</a></li>
+                    <li><a href="./../../about.html">About</a></li>
+                    <li><a href="./../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Description</h2>
+            <p>This component is provided by Floppy Disks or Hard Disk Drives in Managed mode (for Unmanaged mode, see Drive)</p>
+            <p>Component name: <code> filesystem</code>.</p>
+        </article>
+        <article>
+            <h2>Methods</h2>
+            <ul>
+                <li>
+                    <code>spaceUsed():number</code> The currently used capacity of the file system, in bytes.
+                </li>
+                <li>
+                    <code>open(path:string[, mode:string='r']):number</code> Opens a new file descriptor and returns its handle.
+                </li>
+                <li>
+                    <code>seek(handle:number, whence:string, offset:number):number</code> Seeks in an open file descriptor with the specified handle. Returns the new pointer position.
+                </li>
+                <li>
+                    <code>makeDirectory(path:string):boolean</code> Creates a directory at the specified absolute path in the file system. Creates parent directories, if necessary.
+                </li>
+                <li>
+                    <code>exists(path:string):boolean</code> Returns whether an object exists at the specified absolute path in the file system.
+                </li>
+                <li>
+                    <code>isReadOnly():boolean</code> Returns whether the file system is read-only.
+                </li>
+                <li>
+                    <code>write(handle:number, value:string):boolean</code> Writes the specified data to an open file descriptor with the specified handle.
+                </li>
+                <li>
+                    <code>spaceTotal():number</code> The overall capacity of the file system, in bytes.
+                </li>
+                <li>
+                    <code>isDirectory(path:string):boolean</code> Returns whether the object at the specified absolute path in the file system is a directory.
+                </li>
+                <li>
+                    <code>rename(from:string, to:string):boolean</code> Renames/moves an object from the first specified absolute path in the file system to the second.
+                </li>
+                <li>
+                    <code>list(path:string):table</code> Returns a list of names of objects in the directory at the specified absolute path in the file system.
+                </li>
+                <li>
+                    <code>lastModified(path:string):number</code> Returns the (real world) timestamp of when the object at the specified absolute path in the file system was modified.
+                </li>
+                <li>
+                    <code>getLabel():string</code> Get the current label of the file system.
+                </li>
+                <li>
+                    <code>remove(path:string):boolean</code> Removes the object at the specified absolute path in the file system.
+                </li>
+                <li>
+                    <code>close(handle:number)</code> Closes an open file descriptor with the specified handle.
+                </li>
+                <li>
+                    <code>size(path:string):number</code> Returns the size of the object at the specified absolute path in the file system.
+                </li>
+                <li>
+                    <code>read(handle:number, count:number):string or nil</code> Reads up to the specified amount of data from an open file descriptor with the specified handle. Returns nil when EOF is reached.
+                </li>
+                <li>
+                    <code>setLabel(value:string):string</code> Sets the label of the file system. Returns the new value, which may be truncated.
+                </li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>copyright 2023 - Documentation</p>
+    </footer>
+</body>
+</html>

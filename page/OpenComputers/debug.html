@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="./../../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Component : Debug</h1>
+        <div>
+            <div>
+                <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./../../index.html">Home</a></li>
+                    <li><a href="./../../about.html">About</a></li>
+                    <li><a href="./../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Description</h2>
+            <p>This component is provided by the Debug Card.</p>
+            <p>Component name: <code> debug </code>.</p>
+        </article>
+        <article>
+            <h2>Methods</h2>
+            <ul>
+                <li>
+                    <code>changeBuffer(value:number):number</code> Changes the component network's energy buffer by the specified delta.
+                </li>
+                <li>
+                    <code>connectToBlock(x:number, y:number, z:number):boolean</code> Connect the debug card to an opencomputers-compatible block at the specified coordinates.
+                </li>
+                <li>
+                    <code>getPlayer(name:string):userdata</code> Get the entity of a player.
+                </li>
+                <li>
+                    <code>getPlayers():table</code> Get a list of currently logged-in players.
+                </li>
+                <li>
+                    <code>getWorld([id:number]):userdata</code> Get the world object for the specified dimension ID, or the container's.
+                </li>
+                <li>
+                    <code>getWorlds():table</code> Get a list of all world IDs, loaded and unloaded.
+                </li>
+                <li>
+                    <code>getX():number</code> Get the container's X position in the world.
+                </li>
+                <li>
+                    <code>getY():number</code> Get the container's Y position in the world.
+                </li>
+                <li>
+                    <code>getZ():number</code> Get the container's Z position in the world.
+                </li>
+                <li>
+                    <code>isModLoaded(name:string):boolean</code> Get whether a mod or API is loaded.
+                </li>
+                <li>
+                    <code>runCommand(command:string):number, string</code> Runs an arbitrary command using a fake player. The first return value will be 1 if the command ran successfully, or 0 otherwise. The second return value will contain what the command returned, or an error message. If the command doesn't return anything, such as /me, the second value will be nil.
+                </li>
+                <li>
+                    <code>test():userdata</code> Test method for user-data and general value conversion.
+                </li>
+                <li>
+                    <code>getScoreboard():userdata</code> Get the scoreboard object for the world
+                </li>
+                <li>
+                    <code>sendToDebugCard(address:string, data...)</code> Sends data to the debug card with the specified address.
+                </li>
+                <li>
+                    <code>sendToClipboard(player:string, text:string)</code> Sends text to the specified player's clipboard if possible.
+                </li>
+                <li>
+                    <code>scanContentsAt(x: number, y: number, z: number[, worldId: number]):boolean, string, table</code> Returns contents at the location in world by id (defaults to host world). This method behaves the same as the move check for the robot and drone. The first return value is a boolean indicating whether a robot or drone would be able to enter the location (true means it would be blocked and cannot move into that space). The second return is a string value short name of the type of obstruction. Possible values here include: EntityLivingBase, EntityMinecart, air, liquid, replaceable, passable, and solid.The final value returned is a serialized or table representation of the entity or block scanned at the location. The following code snippet can be used to debug what is possibly blocking the robot from moving forward, if the robot is facing in the negative x direction.
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>World Object</h2>
+            <ul>
+                <li>
+                    <code>getMetadata(x:number, y:number, z:number):number</code> Get the metadata of the block at the specified coordinates.
+                </li>
+                <li>
+                    <code>getBlockId(x:number, y:number, z:number):number</code> Get the ID of the block at the specified coordinates.
+                </li>
+                <li>
+                    <code>getDimensionId():number</code> Gets the numeric id of the current dimension.
+                </li>
+                <li>
+                    <code>isLoaded(x:number, y:number, z:number):number</code> Check whether the block at the specified coordinates is loaded.
+                </li>
+                <li>
+                    <code>getSeed():number</code> Gets the seed of the world.
+                </li>
+                <li>
+                    <code>removeFluid(amount:number, x:number, y:number, z:number, side:number):boolean</code> Remove some fluid from a tank at the specified location.
+                </li>
+                <li>
+                    <code>insertFluid(id:string, amount:number, x:number, y:number, z:number, side:number):boolean</code> Insert some fluid into the tank at the specified location.
+                </li>
+                <li>
+                    <code>getDimensionName():string</code> Gets the name of the current dimension.
+                </li>
+                <li>
+                    <code>getTime():number</code> Get the current world time.
+                </li>
+                <li>
+                    <code>setTime(value:number)</code> Set the current world time.
+                </li>
+                <li>
+                    <code>getLightValue(x:number, y:number, z:number):number</code> Get the light value (emission) of the block at the specified coordinates.
+                </li>
+                <li>
+                    <code>isRaining():boolean</code> Returns whether it is currently raining.
+                </li>
+                <li>
+                    <code>setRaining(value:boolean)</code> Sets whether it is currently raining.
+                </li>
+                <li>
+                    <code>isThundering():boolean</code> Returns whether it is currently thundering.
+                </li>
+                <li>
+                    <code>setThundering(value:boolean)</code> Sets whether it is currently thundering.
+                </li>
+                <li>
+                    <code>setBlock(x:number, y:number, z:number, id:number or string, meta:number):number</code> Set the block at the specified coordinates.
+                </li>
+                <li>
+                    <code>setBlocks(x1:number, y1:number, z1:number, x2:number, y2:number, z2:number, id:number or string, meta:number):number</code> Set all blocks in the area defined by the two corner points (x1, y1, z1) and (x2, y2, z2).
+                </li>
+                <li>
+                    <code>removeItem(x:number, y:number, z:number, slot:number[, count:number]):number</code> Reduce the size of an item stack in the inventory at the specified location.
+                </li>
+                <li>
+                    <code>insertItem(id:string, count:number, damage:number, nbt:string, x:number, y:number, z:number, side:number):boolean</code> Insert an item stack into the inventory at the specified location. NBT tag is expected in JSON format.
+                </li>
+                <li>
+                    <code>getSpawnPoint():number, number, number</code> Get the current spawn point coordinates.
+                </li>
+                <li>
+                    <code>setSpawnPoint(x:number, y:number, z:number)</code> Set the spawn point coordinates.
+                </li>
+                <li>
+                    <code>canSeeSky(x:number, y:number, z:number):number</code> Get whether the block at the specified coordinates is directly under the sky.
+                </li>
+                <li>
+                    <code>getLightOpacity(x:number, y:number, z:number):number</code> Get the light opacity of the block at the specified coordinates.
+                </li>
+                <li>
+                    <code>hasTileEntity(x:number, y:number, z:number):number</code> Check whether the block at the specified coordinates has a tile entity.
+                </li>
+                <li>
+                    <code>playSoundAt(x:number, y:number, z:number, sound:string, range:number)</code> Play a sound at the specified coordinates.
+                </li>
+                <li>
+                    <code>getTileNBT(x:number, y:number, z:number):table</code> Get the NBT of the block at the specified coordinates.
+                </li>
+                <li>
+                    <code>setTileNBT(x:number, y:number, z:number, nbt:table):boolean</code> Set the NBT of the block at the specified coordinates.
+                </li>
+                <li>
+                    <code>getBlockState(x:number, y:number, z:number[, actualState:boolean=false])</code> Gets the block state for the block at the specified position, optionally getting additional display related data
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>Player Object</h2>
+            <ul>
+                <li>
+                    <code>getWorld():userdata</code> Get the player's world object.
+                </li>
+                <li>
+                    <code>getGameType():string</code> Get the player's game type.
+                </li>
+                <li>
+                    <code>setGameType(gametype:string)</code> Set the player's game type (survival, creative, adventure).
+                </li>
+                <li>
+                    <code>getHealth():number</code> Get the player's health.
+                </li>
+                <li>
+                    <code>setHealth(health:number)</code> Set the player's health.
+                </li>
+                <li>
+                    <code>getMaxHealth():number</code> Get the player's max health.
+                </li>
+                <li>
+                    <code>getPosition():number, number, number</code> Get the player's position.
+                </li>
+                <li>
+                    <code>setPosition(x:number, y:number, z:number)</code> Set the player's position.
+                </li>
+                <li>
+                    <code>getExperienceTotal():number</code> Get the player's total experience
+                </li>
+                <li>
+                    <code>getLevel():number</code> Get the player's level
+                </li>
+                <li>
+                    <code>addExperienceLevel(level:number)</code> Add a level to the player's experience level
+                </li>
+                <li>
+                    <code>removeExperienceLevel(level:number)</code> Remove a level from the player's experience level
+                </li>
+                <li>
+                    <code>insertItem(id:string, amount:number, meta:number[, nbt:string]):number</code> Adds the item stack to the players inventory
+                </li>
+                <li>
+                    <code>clearInventory()</code> Clear the players inventory
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>Scoreboard Object</h2>
+            <ul>
+                <li>
+                    <code>addObjective(objectiveName:string, objectiveCriteria:string)</code> Create a new objective for the scoreboard
+                </li>
+                <li>
+                    <code>removeObjective(objectiveName:string)</code> Remove an objective from the scoreboard
+                </li>
+                <li>
+                    <code>increasePlayerScore(playerName:string, objectiveName:string, score:int)</code> Increases the score of a player for a certain objective
+                </li>
+                <li>
+                    <code>decreasePlayerScore(playerName:string, objectiveName:string, score:int)</code> Decrease the score of a player for a certain objective
+                </li>
+                <li>
+                    <code>addPlayerToTeam(player:string, team:string):boolean</code> Add a player to a team
+                </li>
+                <li>
+                    <code>removePlayerFromTeam(player:string, team:string):boolean</code> Remove a player from a specific team
+                </li>
+                <li>
+                    <code>removePlayerFromTeams(player:string):boolean</code> Remove a player from their team
+                </li>
+                <li>
+                    <code>addTeam(team:string)</code> Add a team to the scoreboard
+                </li>
+                <li>
+                    <code>removeTeam(teamName: string)</code> Remove a team from the scoreboard
+                </li>
+                <li>
+                    <code>getPlayerScore(playerName:string, objectiveName:string):int</code> Gets the score of a player for a certain objective
+                </li>
+                <li>
+                    <code>setPlayerScore(playerName:string, objectiveName:string, score:int)</code> Sets the score of a player for a certain objective
+                </li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>copyright 2023 - Documentation</p>
+    </footer>
+</body>
+</html>

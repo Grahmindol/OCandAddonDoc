@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="./../../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Component : Elevators</h1>
+        <div>
+            <div>
+                <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./../../index.html">Home</a></li>
+                    <li><a href="./../../about.html">About</a></li>
+                    <li><a href="./../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Description</h2>
+            <p>This is the component provided by the elevators controller block.</p>
+            <p>Component name: <code> lift</code>.</p>
+        </article>
+        <article>
+            <h2>Methods</h2>
+            <ul>
+                <li>
+                    <code>callFloor()</code> Calls the Lift to the specified Floor.
+                </li>
+                <li>
+                    <code>callYValue():number</code> Calls the Lift to the specified Y level.
+                </li>
+                <li>
+                    <code>callXValue(xValue:number):none</code> Calls the Lift to the specified X location.
+                </li>
+                <li>
+                    <code>callZValue(zValue:number):none</code> Calls the Lift to the specified Z location.
+                </li>
+                <li>
+                    <code>setFloor(floor:number):none</code> Sets the floor assosiated to the Controller.
+                </li>
+                <li>
+                    <code>getYValue():number</code> returns the current Y value of the lift.
+                </li>
+                <li>
+                    <code>getXValue():number</code> returns the current X value of the lift.
+                </li>
+                <li>
+                    <code>getZValue():number</code> returns the current Z value of the lift.
+                </li>
+                <li>
+                    <code>getFloor(brighness:number):number</code> returns the Floor assigned to the Controller.
+                </li>
+                <li>
+                    <code>getFloorYValue(floor:number):number</code> returns the y value of the specified floor.
+                </li>
+                <li>
+                    <code>isReady():boolean</code> returns if the elevator is not currently called to a floor.
+                </li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>copyright 2023 - Documentation</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="./../../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Component : Reactor</h1>
+        <div>
+            <div>
+                <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./../../index.html">Home</a></li>
+                    <li><a href="./../../about.html">About</a></li>
+                    <li><a href="./../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article>
+            <h2>Description</h2>
+            <p>This is the component provided by the reactor computer port block.</p>
+            <p>Component name: <code> reactor</code>.</p>
+        </article>
+        <article>
+            <h2>Methods</h2>
+            <ul>
+                <li>
+                    <code>getConnected():boolean</code> Returns true if the computer port is connected to a valid multi-block reactor.
+                </li>
+                <li>
+                    <code>getActive():boolean</code> Returns true if the reactor is active (consuming fuel and generating power), false otherwise.
+                </li>
+                <li>
+                    <code>getNumberOfControlRods():integer</code> Returns the number of control rods attached to this reactor. This is one more than the maximum control rod index.
+                </li>
+                <li>
+                    <code>getEnergyStored():integer</code> Returns the amount of energy stored in the multi-block reactor's internal energy buffer, in Redstone Flux (RF) units.
+                </li>
+                <li>
+                    <code>getFuelTemperature():integer</code> Returns the temperature of the multi-block reactor's fuel, in degrees Centigrade.
+                </li>
+                <li>
+                    <code>getCasingTemperature():integer</code> Returns the temperature of the multi-block reactor's casing/frame, in degrees Centigrade.
+                </li>
+                <li>
+                    <code>getFuelAmount():integer</code> Returns the total amount of fuel contained in the reactor, in milli-buckets (mB)
+                </li>
+                <li>
+                    <code>getWasteAmount():integer</code> Returns the total amount of waste contained in the reactor, in milli-buckets (mB)
+                </li>
+                <li>
+                    <code>getFuelAmountMax():Integer</code> Returns the total amount of fuel + waste which can be contained in the reactor at one time, in milli-buckets (mB)
+                </li>
+                <li>
+                    <code>getControlRodName(Integer: control rod index):String</code> Returns the user-set name for the specified control rod, as a string. String is empty if the name is not set.
+                </li>
+                <li>
+                    <code>getControlRodLevel(Integer: control rod index):Integer</code> Returns an integer indicating how far the specified control rod is inserted into the reactor, range is from 0 (not inserted) to 100 (fully inserted)
+                </li>
+                <li>
+                    <code>getEnergyProducedLastTick():Float</code> Returns an estimate of the Redstone Flux (RF) energy generated in the past tick. If the reactor is actively cooled, returns the amount of hot fluid produced in the past tick, in milli-Buckets (mB).
+                </li>
+                <li>
+                    <code>getHotFluidProducedLastTick():Float</code> Returns the amount of hot fluid produced in the past tick, in milli-Buckets (mB). If the reactor is passively cooled, always returns 0.
+                </li>
+                <li>
+                    <code>getCoolantType():String or Nil</code> Returns the Fluid Dictionary name of the type of fluid contained in the multi-block reactor's coolant tank, or Nil if the tank is empty.
+                </li>
+                <li>
+                    <code>getCoolantAmount():Integer</code> Returns the amount of coolant fluid contained in the multi-block reactor's coolant tank, in milli-buckets (mB)
+                </li>
+                <li>
+                    <code>getHotFluidType():String or Nil</code> Returns the Fluid Dictionary name of the type of fluid contained in the multi-block reactor's hot-fluid tank, or Nil if the tank is empty.
+                </li>
+                <li>
+                    <code>getHotFluidAmount():Integer</code> Returns the amount of superheated fluid contained in the multi-block reactor's hot-fluid tank, in milli-buckets (mB)
+                </li>
+                <li>
+                    <code>getFuelReactivity():Integer</code> Returns the reactivity level of the reactor's fuel. 100 = 100 percent.
+                </li>
+                <li>
+                    <code>getFuelConsumedLastTick():Float</code> Returns the amount of fuel consumed last tick, in milli-buckets (mB). Note that fractional milliBuckets can be consumed, so this can return, for example, 0.5
+                </li>
+                <li>
+                    <code>isActivelyCooled():Boolean</code> Boolean Returns true if the multi-block reactor is in "active cooling" mode, false otherwise
+                </li>
+                <li>
+                    <code>setActive(Boolean: active?):none</code> Sets the reactor to be active if the argument is true, or inactive if the argument is false
+                </li>
+                <li>
+                    <code>setAllControlRodLevels(Integer: insertion level (0-100)):none</code> Sets all control rods to the specified insertion level. Range is from 0 (not inserted) to 100 (fully inserted)
+                </li>
+                <li>
+                    <code>setControlRodLevel(Integer: control rod index, Integer: insertion level (0-100)):none</code> Sets the specified control rod (first argument) to the specified insertion level (second argument). Insertion level range is from 0 to 100, as above.
+                </li>
+                <li>
+                    <code>doEjectWaste():None</code> Instruct the reactor to attempt to eject any waste in the reactor via its access ports. The reactor will favor access ports set to Out. 1 ingot of waste will be ejected per 1000 mB currently in the reactor. If there is less than 1000 mB of waste in the reactor, nothing will happen.
+                </li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>copyright 2023 - Documentation</p>
+    </footer>
+</body>
+</html>
