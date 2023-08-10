@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Component : name</h1>
+        <h1>Component : Draconic RF Storage</h1>
         <div>
             <div>
                 <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
@@ -26,14 +26,26 @@
     <main>
         <article>
             <h2>Description</h2>
-            <p>This is the component provided by the name.</p>
-            <p>Component name: <code> name</code>.</p>
+            <p>This is the component provided by the energy pylon with the adapter.</p>
+            <p>Component name: <code> draconic_rf_storage</code>.</p>
         </article>
         <article>
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>getEnergyStored():number</code> Returns an integer value of the current energy stored in the multiblock.
+                </li>
+                <li>
+                    <code>getMaxEnergyStored():number</code> Returns an integer value of the maximum energy that can be stored in the current tier.
+                </li>
+                <li>
+                    <code>getTransferPerTick():number</code> Returns an integer corresponding to the RF gain or loss per tick.
+                </li>
+                <li>
+                    <code>canExtract():boolean</code> Returns whether this component can have energy extracted from the connected side
+                </li>
+                <li>
+                    <code>canReceive():boolean</code> Returns whether this component can receive energy from the connected side
                 </li>
             </ul>
         </article>

@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Component : name</h1>
+        <h1>Component : Draconic Reactor</h1>
         <div>
             <div>
                 <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
@@ -26,14 +26,39 @@
     <main>
         <article>
             <h2>Description</h2>
-            <p>This is the component provided by the name.</p>
-            <p>Component name: <code> name</code>.</p>
+            <p>This is the component provided by Draconic Reactor component with the adapter.</p>
+            <p>Component name: <code> draconic_reactor</code>.</p>
         </article>
         <article>
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>stopReactor():boolean</code> stop the Reactor.
+                </li>
+                <li>
+                    <code>canReceive():boolean</code> Returns whether this component can receive energy from the connected side
+                </li>
+                <li>
+                    <code>chargeReactor():boolean</code> charge the fuel in the reactor
+                </li>
+                <li>
+                    <code>canExtract():boolean</code> Returns whether this component can have energy extracted from the connected side
+                </li>
+                <li>
+                    <code>activateReactor():boolean</code> activate the reactor.
+                </li>
+                <li>
+                    <code>getEnergyStored():number</code> Returns the amount of stored energy on the connected side.
+                </li>
+                <li>
+                    <code>getReactorInfo():table</code> Returns an table with all information about the reactor. an example of table: <br />
+                    {fuelConversionRate=0.0,energySaturation=0.0,fuelConversion=1.393,maxFieldStrength=100000000.0,maxEnergySaturation=1000000000.0,fieldStrength=50000000.0,temperature=2000.00,maxFuelConversion=10368.0,fieldDrainRate=1373.0,failSafe=false,generationRate=2.0,status="running"}
+                </li>
+                <li>
+                    <code>setFailSafe()</code> set the reactor in safe mod.
+                </li>
+                <li>
+                    <code>getMaxEnergyStored():number</code> Returns the maximum amount of stored energy on the connected side.
                 </li>
             </ul>
         </article>

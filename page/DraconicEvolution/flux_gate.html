@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Component : name</h1>
+        <h1>Component : Flux gate</h1>
         <div>
             <div>
                 <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
@@ -26,14 +26,32 @@
     <main>
         <article>
             <h2>Description</h2>
-            <p>This is the component provided by the name.</p>
-            <p>Component name: <code> name</code>.</p>
+            <p>This is the component provided by the flux gate with the adapter.</p>
+            <p>Component name: <code> flux_gate</code>.</p>
         </article>
         <article>
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>setSignalHighFlow()</code> set the signal high Flow.
+                </li>
+                <li>
+                    <code>setSignalLowFlow()</code> Set the signal low flow.
+                </li>
+                <li>
+                    <code>getSignalLowFlow():number</code> Returns Signal Low Flow.
+                </li>
+                <li>
+                    <code>getSignalHighFlow():number</code> return the Signal High Flow
+                </li>
+                <li>
+                    <code>getFlow():number</code> Returns the current Flow
+                </li>
+                <li>
+                    <code>setOverrideEnabled(value:boolean)</code> set whether the Override is Enabled.
+                </li>
+                <li>
+                    <code>getOverrideEnabled():boolean</code> Returns whether the Override is Enabled.
                 </li>
             </ul>
         </article>
