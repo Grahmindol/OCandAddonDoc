@@ -44,12 +44,22 @@
             <h2>Events</h2>
             <ul>
                 <li>
-                    <code>cardInsert(address: string)</code> <p>This signal is queued by the card writer when card inseted by a player. </p> <br />
-                    <p>address is the address of the card writer</p> 
+                    <code>cardInsert(address: string)</code>
+                    <p>This signal is queued by the card writer when card inseted by a player. </p>
+                    <ul>
+                        <li>
+                            <p><code>address</code> is the address of the reader</p>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <code>cardRemove(address: string)</code> <p>This signal is queued by the card writer when card removed by a player. </p> <br />
-                    <p>address is the address of the card writer</p> 
+                    <code>cardRemove(address: string)</code>
+                    <p>This signal is queued by the card writer when card removed by a player. </p>
+                    <ul>
+                        <li>
+                            <p><code>address</code> is the address of the reader</p>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </article>

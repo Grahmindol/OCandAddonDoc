@@ -41,12 +41,25 @@
             <h2>Events</h2>
             <ul>
                 <li>
-                    <code>rfidData(address:string, uuid:string, playerName:string, distance:number, data:string)</code> <p>This signal is queued by the RFID reader when a method of os_rfidreader called by a computer foreach card found. </p> <br />
-                    <p>address is the address of the reader</p> <br />
-                    <p>uuid is the uuid of the card</p> <br />
-                    <p>playerName is the name of the player who have the card</p><br />
-                    <p>distance is the distance of the player who have the card</p><br />
-                    <p>data is the data stored in the card</p>
+                    <code>rfidData(address:string, uuid:string, playerName:string, distance:number, data:string)</code> 
+                    <p>This signal is queued by the RFID reader when a method of os_rfidreader called by a computer foreach card found. </p> 
+                    <ul>
+                        <li>
+                            <p><code>address</code> is the address of the reader</p>
+                        </li>
+                        <li>
+                            <p><code>uuid</code> is the uuid of the card</p>
+                        </li>
+                        <li>
+                            <p><code>playerName</code> is the name of the player who have the card</p>
+                        </li>
+                        <li>
+                            <p><code>distance</code> is the distance of the player who have the card</p>
+                        </li>
+                        <li>
+                            <p><code>data</code> is the data stored in the card</p>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </article>

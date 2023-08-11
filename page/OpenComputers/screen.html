@@ -70,49 +70,121 @@
             <h2>Events</h2>
             <ul>
                 <li>
-                    <code>screen_resized(screenAddress: string, newWidth: number, newHeight: number) </code> This signal is queued by screens when their resolution changes, for example because it was manually set via a GPU. <br />
-                    <code>screenAddress</code> is the address of the screen that changed resolution. <br />
-                    <code>newWidth</code> is the new width of the screen. <br />
-                    <code>newHeight</code> is the new height of the screen.
+                    <code>screen_resized(screenAddress: string, newWidth: number, newHeight: number) </code>
+                    <p>This signal is queued by screens when their resolution changes, for example because it was manually set via a GPU. </p>
+                    <ul>
+                        <li>
+                            <p><code>screenAddress</code> The address of the screen.</p>
+                        </li>
+                        <li>
+                            <p><code>newWidth</code> The new width of the screen.</p>
+                        </li>
+                        <li>
+                            <p><code>newHeight</code> The new height of the screen.</p>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <code>touch(screenAddress: string, x: number, y: number, button: number, playerName: string) </code> This signal is queued by screens of tier two and tier three when they are clicked. This includes left clicks in the GUI (i.e. when a keyboard is attached) or when right-clicking/activating them in the world directly (i.e. when no keyboard is attached or when sneak-activating).<br />
-                    <code>screenAddress</code> is the address of the screen that was clicked. <br />
-                    <code>x</code> is the x coordinate of the click, in pixels. <br />
-                    <code>y</code> is the y coordinate of the click, in pixels. <br />
-                    <code>button</code> is the mouse's button that was clicked. <br />
-                    <code>playerName</code> is the name of the player that clicked the screen.
+                    <code>touch(screenAddress: string, x: number, y: number, button: number, playerName: string) </code> 
+                    <p>This signal is queued by screens of tier two and tier three when they are clicked. This includes left clicks in the GUI (i.e. when a keyboard is attached) or when right-clicking/activating them in the world directly (i.e. when no keyboard is attached or when sneak-activating).</p>
+                    <ul>
+                        <li>
+                            <p><code>screenAddress</code> The address of the screen.</p>
+                        </li>
+                        <li>
+                            <p><code>x</code> The x position of the click.</p>
+                        </li>
+                        <li>
+                            <p><code>y</code> The y position of the click.</p>
+                        </li>
+                        <li>
+                            <p><code>button</code> The button that was clicked. 0 for left, 1 for right.</p>
+                        </li>
+                        <li>
+                            <p><code>playerName</code> The name of the player that clicked the screen.</p>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <code>drag(screenAddress: string, x: number, y: number, button: number, playerName: string) </code> This signal is almost equivalent to the touch signal. The only difference is the implicit meaning: when this signal is fired, it “belongs” to a touch signal that was fired earlier. This can only be triggered by dragging in the GUI.<br />
-                    <code>screenAddress</code> is the address of the screen that was clicked. <br />
-                    <code>x</code> is the x coordinate of the click, in pixels. <br />
-                    <code>y</code> is the y coordinate of the click, in pixels. <br />
-                    <code>button</code> is the mouse's button that was clicked. <br />
-                    <code>playerName</code> is the name of the player that clicked the screen.
+                    <code>drag(screenAddress: string, x: number, y: number, button: number, playerName: string) </code> 
+                    <p>This signal is almost equivalent to the touch signal. The only difference is the implicit meaning: when this signal is fired, it “belongs” to a touch signal that was fired earlier. This can only be triggered by dragging in the GUI.</p>
+                    <ul>
+                        <li>
+                            <p><code>screenAddress</code> is the address of the screen that was clicked.</p>
+                        </li>
+                        <li>
+                            <p><code>x</code> is the x coordinate of the click, in pixels.</p>
+                        </li>
+                        <li>
+                            <p><code>y</code> is the y coordinate of the click, in pixels.</p>
+                        </li>
+                        <li>
+                            <p><code>button</code> is the mouse's button that was clicked.</p>
+                        </li>
+                        <li>
+                            <p><code>playerName</code> is the name of the player that clicked the screen.</p>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <code>drop(screenAddress: string, x: number, y: number, button: number, playerName: string) </code> This signal is triggered when the player releases the mouse button after a touch signal. Despite the name, it does not necessarily follow a drag signal.<br />
-                    <code>screenAddress</code> is the address of the screen that was clicked. <br />
-                    <code>x</code> is the x coordinate of the click, in pixels. <br />
-                    <code>y</code> is the y coordinate of the click, in pixels. <br />
-                    <code>button</code> is the mouse's button that was clicked. <br />
-                    <code>playerName</code> is the name of the player that clicked the screen.
+                    <code>drop(screenAddress: string, x: number, y: number, button: number, playerName: string) </code> 
+                    <p>This signal is triggered when the player releases the mouse button after a touch signal. Despite the name, it does not necessarily follow a drag signal.</p>
+                    <ul>
+                        <li>
+                            <p><code>screenAddress</code> is the address of the screen that was clicked.</p>
+                        </li>
+                        <li>
+                            <p><code>x</code> is the x coordinate of the click, in pixels.</p>
+                        </li>
+                        <li>
+                            <p><code>y</code> is the y coordinate of the click, in pixels.</p>
+                        </li>
+                        <li>
+                            <p><code>button</code> is the mouse's button that was clicked.</p>
+                        </li>
+                        <li>
+                            <p><code>playerName</code> is the name of the player that clicked the screen.</p>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <code>scroll(screenAddress: string, x: number, y: number, direction: number, playerName: string) </code> This signal is queued by screens of tier two and tier three when the player uses the mouse wheel in the GUI.
-                    <code>screenAddress</code> is the address of the screen that was clicked. <br />
-                    <code>x</code> is the x coordinate of cursor location when the scroll occurred, in pixels. <br />
-                    <code>y</code> is the y coordinate of cursor location when the scroll occurred, in pixels. <br />
-                    <code>direction</code> is the direction of the scroll. <br />
-                    <code>playerName</code> is the name of the player that clicked the screen.
+                    <code>scroll(screenAddress: string, x: number, y: number, direction: number, playerName: string) </code> 
+                    <p>This signal is queued by screens of tier two and tier three when the player uses the mouse wheel in the GUI.</p>
+                    <ul>
+                        <li>
+                            <p><code>screenAddress</code> is the address of the screen that was clicked.</p>
+                        </li>
+                        <li>
+                            <p><code>x</code> is the x coordinate of cursor location when the scroll occurred, in pixels.</p>
+                        </li>
+                        <li>
+                            <p><code>y</code> is the y coordinate of cursor location when the scroll occurred, in pixels.</p>
+                        </li>
+                        <li>
+                            <p><code>direction</code> is the direction of the scroll.</p>
+                        </li>
+                        <li>
+                            <p><code>playerName</code> is the name of the player that clicked the screen.</p>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <code>walk(screenAddress: string, x: number, y: number[, playerName: string]) </code> This signal is queued by screens of tier two and tier three when a player or other entity walks on them.
-                    <code>screenAddress</code> is the address of the screen that was clicked. <br />
-                    <code>x</code> is the x coordinate of the sub-block of the multi-block screen that queued the event <br />
-                    <code>y</code> is the y coordinate of the sub-block of the multi-block screen that queued the event <br />
-                    <code>playerName</code> is the name of the player that walked on the screen.
+                    <code>walk(screenAddress: string, x: number, y: number[, playerName: string]) </code> 
+                    <p>This signal is queued by screens of tier two and tier three when a player or other entity walks on them.</p>
+                    <ul>
+                        <li>
+                            <p><code>screenAddress</code> is the address of the screen that was clicked.</p>
+                        </li>
+                        <li>
+                            <p><code>x</code> is the x coordinate of the sub-block of the multi-block screen that queued the event</p>
+                        </li>
+                        <li>
+                            <p><code>y</code> is the y coordinate of the sub-block of the multi-block screen that queued the event</p>
+                        </li>
+                        <li>
+                            <p><code>playerName</code> is the name of the player that walked on the screen.</p>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </article>

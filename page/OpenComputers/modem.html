@@ -79,12 +79,25 @@
             <h2>Events</h2>
             <ul>
                 <li>
-                    <code>modem_message(receiverAddress: string, senderAddress: string, port: number, distance: number, ...)</code> <p>This signal is queued by network cards (including wireless ones) when they receive a message on an open port. </p> <br />
-                    <code>receiverAddress</code> is the address of the network card that received the message.<br />
-                    <code>senderAddress</code> is the address from where the message was sent.<br />
-                    <code>port</code> is the port on which the message was received.<br />
-                    <code>distance</code> is the distance only set when receiving wireless network messages.<br />
-                    <code>All further parameters</code> are user defined and correspond to what the sender specified in modem.send() or modem.broadcast() as the message's payload.<br />
+                    <code>modem_message(receiverAddress: string, senderAddress: string, port: number, distance: number, ...)</code> 
+                    <p>This signal is queued by network cards (including wireless ones) when they receive a message on an open port. </p> 
+                    <ul>
+                        <li>
+                            <p><code>receiverAddress</code> is the address of the network card that received the message.</p>
+                        </li>
+                        <li>
+                            <p><code>senderAddress</code> is the address from where the message was sent.</p>
+                        </li>
+                        <li>
+                            <p><code>port</code> is the port on which the message was received.</p>
+                        </li>
+                        <li>
+                            <p><code>distance</code> is the distance only set when receiving wireless network messages.</p>
+                        </li>
+                        <li>
+                            <p><code>All further parameters</code> are user defined and correspond to what the sender specified in modem.send() or modem.broadcast() as the message's payload.</p>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </article>

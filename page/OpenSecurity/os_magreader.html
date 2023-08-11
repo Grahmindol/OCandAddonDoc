@@ -47,13 +47,28 @@
             <h2>Events</h2>
             <ul>
                 <li>
-                    <code>magData(address: string, playerName: string, cardData: string, cardUniqueId : string, isCardLocked : boolean, side : number)</code> <p>This signal is queued by the Magnetic Card reader when it is clicked with a Magnetic Cards. </p> <br />
-                    <p>address is the address of the reader</p> <br />
-                    <p>playerName is name of the player that used the card</p> <br />
-                    <p>cardData is the data stored on the card</p> <br />
-                    <p>cardUniqueId is the unique card id</p> <br />
-                    <p>isCardLocked is the writelock state of card</p> <br />
-                    <p>side is the block side of card reader which the player used the card on</p>
+                    <code>magData(address: string, playerName: string, cardData: string, cardUniqueId : string, isCardLocked : boolean, side : number)</code> 
+                    <p>This signal is queued by the Magnetic Card reader when it is clicked with a Magnetic Cards. </p>
+                    <ul>
+                        <li>
+                            <p><code>address</code> is the address of the reader</p>
+                        </li>
+                        <li>
+                            <p><code>playerName</code> is name of the player that used the card</p>
+                        </li>
+                        <li>
+                            <p><code>cardData</code> is the data stored on the card</p>
+                        </li>
+                        <li>
+                            <p><code>cardUniqueId</code> is the unique card id</p>
+                        </li>
+                        <li>
+                            <p><code>isCardLocked</code> is the writelock state of card</p>
+                        </li>
+                        <li>
+                            <p><code>side</code> is the block side of card reader which the player used the card on</p>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </article>

@@ -59,12 +59,25 @@
             <h2>Events</h2>
             <ul>
                 <li>
-                    <code>bus_message(protocolId: number, senderAddress: number, targetAddress: number, data: table, metadata: table)</code> <p>Triggered when a message is received on the abstract bus. </p> <br />
-                    <p>protocolId is the protocol version that was used.</p> <br />
-                    <p>senderAddress is the address of the sender.</p> <br />
-                    <p>targetAddress is the address of the device that the messages was intended for (-1 for network broadcasts).</p> <br />
-                    <p>data is a table of the data that was sent.</p> <br />
-                    <p>metadata is a table of data that are unique to the device that send the address.</p>
+                    <code>bus_message(protocolId: number, senderAddress: number, targetAddress: number, data: table, metadata: table)</code> 
+                    <p>Triggered when a message is received on the abstract bus. </p> 
+                    <ul>
+                        <li>
+                            <p><code>protocolId</code> is the protocol version that was used.</p>
+                        </li>
+                        <li>
+                            <p><code>senderAddress</code> is the address of the sender.</p>
+                        </li>
+                        <li>
+                            <p><code>targetAddress</code> is the address of the device that the messages was intended for (-1 for network broadcasts).</p>
+                        </li>
+                        <li>
+                            <p><code>data</code> is a table of the data that was sent.</p>
+                        </li>
+                        <li>
+                            <p><code>metadata</code> is a table of data that are unique to the device that send the address.</p>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </article>
