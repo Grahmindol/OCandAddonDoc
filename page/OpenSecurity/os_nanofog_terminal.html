@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation</title>
     <link rel="stylesheet" href="./../../css/styles.css">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./../../images/favicon.ico">
 </head>
 <body>
     <header>
-        <h1>Component : name</h1>
+        <h1>Component : NanoFog Terminal</h1>
         <div>
             <div>
                 <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
@@ -26,14 +26,53 @@
     <main>
         <article>
             <h2>Description</h2>
-            <p>This is the component provided by the name.</p>
-            <p>Component name: <code> name</code>.</p>
+            <p>This is the component provided by the NanoFog Terminal block.</p>
+            <p>Component name: <code> os_nanofog_terminal</code>.</p>
         </article>
         <article>
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>set(x:number, y:number, z:number, blockName:string [, blockMetaindex:number]):boolean </code> sets a fog block in the world
+                </li>
+                <li>
+                    <code>setArea(x1:number, y1:number, z1:number, x2:number, y2:number, z2:number, blockName:string [, blockMetaindex:number]):boolean</code> sets fog in the defined area, usage like `set` method
+                </li>
+                <li>
+                    <code>reset(x:number, y:number, z:number):boolean </code>  removes a fog block from the world
+                </li>
+                <li>
+                    <code>resetAll():boolean </code> removes all fog blocks assigned to this terminal from the world
+                </li>
+                <li>
+                    <code>setShield(x:number, y:number, z:number):boolean </code> sets a block to shield mode (walkthrough possible for anyone)
+                </li>
+                <li>
+                    <code>setSolid(x:number, y:number, z:number):boolean</code> sets a block to solid mode, walkthroug only possible for entities on the pass filter.
+                </li>
+                <li>
+                    <code>setKnockback(x:number, y:number, z:number, power:number):boolean </code> sets the power for knockback of entities that aren't allowed to pass the fog, valid values for power [0, 1, 2].
+                </li>
+                <li>
+                    <code>setDamage(x:number, y:number, z:number, powe:number):boolean </code> sets the amount of damage dealt to entities on the damage filter, valid values for damage [0 - 5]
+                </li>
+                <li>
+                    <code>getMaterial():integer</code> returns the current material input (the output is not reported)
+                </li>
+                <li>
+                    <code>get(x:number, y:number, z:number):string </code> tells you if a block is air/nanofog or anything else
+                </li>
+                <li>
+                    <code>setFilter(x:number, y:number, z:number, types:string, allowPass:boolean, damageEntity:boolean, name:string):boolean</code> sets/removes a filter for the specified entity type/class, all entities of the defined type will be filtered when no name argument is specified.types: player, hostile, animal, item, all
+                </li>
+                <li>
+                    <code>getFilterPass(x:number, y:number, z:number):array</code> returns the pass filter list for the defined block
+                </li>
+                <li>
+                    <code>getFilterDamage(x:number, y:number, z:number):array</code> returns the damage filter list for the defined block
+                </li>
+                <li>
+                    <code>getEntityClassNames():array</code> returns a list of entity class names that can be used in the filter
                 </li>
             </ul>
         </article>

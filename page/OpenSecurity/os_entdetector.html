@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation</title>
     <link rel="stylesheet" href="./../../css/styles.css">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./../../images/favicon.ico">
 </head>
 <body>
     <header>
-        <h1>Component : name</h1>
+        <h1>Component : Entity Detector</h1>
         <div>
             <div>
                 <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
@@ -26,14 +26,31 @@
     <main>
         <article>
             <h2>Description</h2>
-            <p>This is the component provided by the name.</p>
-            <p>Component name: <code> name</code>.</p>
+            <p>This is the component provided by the Entity Detector block.</p>
+            <p>Component name: <code>os_entdetector</code>.</p>
         </article>
         <article>
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>scanPlayers([range:number])</code> Returns a table of detected entities, also queues a signal for each entity found
+                </li>
+                <li>
+                    <code>scanEntities([range:number])</code> Returns a table of detected entities, also queues a signal for each entity found (This omits players, but can include dropped items)
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>Events</h2>
+            <ul>
+                <li>
+                    <code>entityDetect(address: string, name: string, range: number, x:number, y:number, z:number)</code> <p>This signal is queued by the Entity Detector for each entity found when a method of os_entdetector called by a computer. </p> <br />
+                    <p>address is the address of the Entity Detector</p> <br />
+                    <p>name is the name of the entity</p> <br />
+                    <p>range is the range of the detector</p> <br />
+                    <p>x is the x coordinate of the entity</p> <br />
+                    <p>y is the y coordinate of the entity</p> <br />
+                    <p>z is the z coordinate of the entity</p> 
                 </li>
             </ul>
         </article>

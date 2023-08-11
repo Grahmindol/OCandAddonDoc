@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation</title>
     <link rel="stylesheet" href="./../../css/styles.css">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./../../images/favicon.ico">
 </head>
 <body>
     <header>
-        <h1>Component : name</h1>
+        <h1>Component : RFID Reader</h1>
         <div>
             <div>
                 <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
@@ -26,20 +26,46 @@
     <main>
         <article>
             <h2>Description</h2>
-            <p>This is the component provided by the name.</p>
-            <p>Component name: <code> name</code>.</p>
+            <p>This is the component provided by the RFID Reader block.</p>
+            <p>Component name: <code> os_rfidreader</code>.</p>
         </article>
         <article>
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>scan([range:number]):table </code> Scans for all entites for RFIDs within range default is 16 blocks
                 </li>
             </ul>
+        </article>
+        <article>
+            <h2>Events</h2>
+            <ul>
+                <li>
+                    <code>rfidData(address:string, uuid:string, playerName:string, distance:number, data:string)</code> <p>This signal is queued by the RFID reader when a method of os_rfidreader called by a computer foreach card found. </p> <br />
+                    <p>address is the address of the reader</p> <br />
+                    <p>uuid is the uuid of the card</p> <br />
+                    <p>playerName is the name of the player who have the card</p><br />
+                    <p>distance is the distance of the player who have the card</p><br />
+                    <p>data is the data stored in the card</p>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>Example</h2>
+            <pre>
+            <code class="language-lua">
+-- <a href="https://github.com/PC-Logix/OpenSecurity/wiki/RFID_reader" target="_blank">https://github.com/PC-Logix/OpenSecurity/wiki/RFID_reader</a>
+output = component.os_rfidReader.scan(10)
+for k, v in pairs(output[1]) do
+    print(k, v)
+end
+                </code>
+</pre>
         </article>
     </main>
     <footer>
         <p>copyright 2023 - Documentation</p>
     </footer>
+    <script src="./../../js/prism.js"></script>
 </body>
 </html>

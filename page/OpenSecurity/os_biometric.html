@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation</title>
     <link rel="stylesheet" href="./../../css/styles.css">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./../../images/favicon.ico">
 </head>
 <body>
     <header>
-        <h1>Component : name</h1>
+        <h1>Component : Biometric Reader </h1>
         <div>
             <div>
                 <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
@@ -26,20 +26,48 @@
     <main>
         <article>
             <h2>Description</h2>
-            <p>This is the component provided by the name.</p>
-            <p>Component name: <code> name</code>.</p>
+            <p>This is the component provided by the Biometric Reader block.</p>
+            <p>Component name: <code> os_biometric </code>.</p>
         </article>
         <article>
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>setEventName(name:string)</code> changes the event name to the given argument
                 </li>
             </ul>
+        </article>
+        <article>
+            <h2>Events</h2>
+            <ul>
+                <li>
+                    <code>bioReader(address: string, reader_uuid: string, player_uuid: string)</code> <p>This signal is queued by the biometric reader when used by a player. </p> <br />
+                    <p>address is the address of the reader</p> <br />
+                    <p>reader_uuid is the uuid of the reader</p> <br />
+                    <p>player_uuid is the uuid of the player</p>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>Example</h2>
+            <pre>
+            <code class="language-lua">
+-- <a href="https://github.com/PC-Logix/OpenSecurity/wiki/BiometricReader" target="_blank">https://github.com/PC-Logix/OpenSecurity/wiki/BiometricReader</a>
+event = require("event") -- require event
+reader = require("component").os_biometric -- require the biometric reader
+
+function onRead(address, reader_uuid, player_uuid) -- function to call once the reader is used.
+   print(player_uuid .. " entered!") -- print the UUID of the player that was scanned.
+end
+
+event.listen("bioReader", onRead) -- listen to the bioReader event 
+                </code>
+</pre>
         </article>
     </main>
     <footer>
         <p>copyright 2023 - Documentation</p>
     </footer>
+    <script src="./../../js/prism.js"></script>
 </body>
 </html>

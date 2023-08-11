@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation</title>
     <link rel="stylesheet" href="./../../css/styles.css">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./../../images/favicon.ico">
 </head>
 <body>
     <header>
-        <h1>Component : name</h1>
+        <h1>Component : Door Controller</h1>
         <div>
             <div>
                 <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
@@ -26,14 +26,29 @@
     <main>
         <article>
             <h2>Description</h2>
-            <p>This is the component provided by the name.</p>
-            <p>Component name: <code> name</code>.</p>
+            <p>This is the component provided by the Door Controller block.</p>
+            <p>Component name: <code> os_doorcontroller</code>.</p>
         </article>
         <article>
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>toggle([password:string])</code> Opens or Closes the Door, if door as password, you must provide it.
+                </li>
+                <li>
+                    <code>isOpen()</code> check if door is open
+                </li>
+                <li>
+                    <code>open([password:string]) </code> Opens the Door, if door as password, you must provide it.
+                </li>
+                <li>
+                    <code>close([password:string]) </code> Closes the Door,if door as password, you must provide it.
+                </li>
+                <li>
+                    <code>setPassword([oldPassword:string], newPassword:string) </code> Changes the password, if door as password, you must provide it.
+                </li>
+                <li>
+                    <code>removePassword(password:string) </code> Removes the password, if door as password, you must provide it.
                 </li>
             </ul>
         </article>

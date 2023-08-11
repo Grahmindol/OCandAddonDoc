@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation</title>
     <link rel="stylesheet" href="./../../css/styles.css">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./../../images/favicon.ico">
 </head>
 <body>
     <header>
-        <h1>Component : name</h1>
+        <h1>Component : Card Writer</h1>
         <div>
             <div>
                 <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
@@ -26,14 +26,30 @@
     <main>
         <article>
             <h2>Description</h2>
-            <p>This is the component provided by the name.</p>
-            <p>Component name: <code> name</code>.</p>
+            <p>This is the component provided by the Card Writer block.</p>
+            <p>Component name: <code>os_cardwriter</code>.</p>
         </article>
         <article>
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>write(data:string, displayName:string[,locked:boolean][,color:number])</code> writes data to an magnetic/rfid card
+                </li>
+                <li>
+                    <code>flash(data:string, title:string, writelock:boolean)</code> flashes data to an eeprom
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>Events</h2>
+            <ul>
+                <li>
+                    <code>cardInsert(address: string)</code> <p>This signal is queued by the card writer when card inseted by a player. </p> <br />
+                    <p>address is the address of the card writer</p> 
+                </li>
+                <li>
+                    <code>cardRemove(address: string)</code> <p>This signal is queued by the card writer when card removed by a player. </p> <br />
+                    <p>address is the address of the card writer</p> 
                 </li>
             </ul>
         </article>

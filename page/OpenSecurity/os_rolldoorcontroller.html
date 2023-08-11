@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation</title>
     <link rel="stylesheet" href="./../../css/styles.css">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./../../images/favicon.ico">
 </head>
 <body>
     <header>
-        <h1>Component : name</h1>
+        <h1>Component : Rolldoor Controller</h1>
         <div>
             <div>
                 <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
@@ -26,14 +26,38 @@
     <main>
         <article>
             <h2>Description</h2>
-            <p>This is the component provided by the name.</p>
-            <p>Component name: <code> name</code>.</p>
+            <p>This is the component provided by the Rolldoor Controller block.</p>
+            <p>Component name: <code> os_rolldoorcontroller</code>.</p>
         </article>
         <article>
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>getHeight():number</code> returns the height/end position of the door
+                </li>
+                <li>
+                    <code>getPosition():number</code> returns the current position of the door
+                </li>
+                <li>
+                    <code>close([password:string]):boolean</code> moves the door to end position
+                </li>
+                <li>
+                    <code>open([password:string]):boolean</code> moves the door to position 0
+                </li>
+                <li>
+                    <code>toggle([password:string]):boolean</code> toggles the door (closes if its at position 0, opens otherwise)
+                </li>
+                <li>
+                    <code>isMoving():boolean</code> guess it
+                </li>
+                <li>
+                    <code>setPosition(targetPosition:number[, password:string]):number</code> moves the door to the provided position [range: 0 - height]
+                </li>
+                <li>
+                    <code>setSpeed(moveSpeed:number[, password:string]):number</code> sets the move speed of the rolldoor, returns the new speed value [range: 0.1 - 3]
+                </li>
+                <li>
+                    <code>setPassword(newPassword:string[, oldPassword:string]):boolean</code>  sets/resets the rolldoor password
                 </li>
             </ul>
         </article>

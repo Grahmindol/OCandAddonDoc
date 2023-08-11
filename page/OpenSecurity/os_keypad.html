@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation</title>
     <link rel="stylesheet" href="./../../css/styles.css">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./../../images/favicon.ico">
 </head>
 <body>
     <header>
-        <h1>Component : name</h1>
+        <h1>Component : Keypad</h1>
         <div>
             <div>
                 <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
@@ -26,20 +26,118 @@
     <main>
         <article>
             <h2>Description</h2>
-            <p>This is the component provided by the name.</p>
-            <p>Component name: <code> name</code>.</p>
+            <p>This is the component provided by the Keypad block.</p>
+            <p>Component name: <code>os_keypad</code>.</p>
         </article>
         <article>
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>setEventName(name:string)</code> Sets the event name returned when you press a button, default is keypad
+                </li>
+                <li>
+                    <code>setDisplay(displayText:string[, textColor:number])</code> Sets a text to display with a textColor ( a minecraft color code (0-15))
+                </li>
+                <li>
+                    <code>setVolume(volume:number)</code> sets the keypad beep volume (expects double numbers as input)
+                </li>
+                <li>
+                    <code>getVolume()</code> returns the current volume of the keypad beep
+                </li>
+                <li>
+                    <code>setKey(customButtons:table, customButtonColor:table)</code> Sets the custom buttons and their colors <br/>
+                    <p>this is the default order : <code> customButtons = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"} </code></p><br />
+                    <p>This works the same as button labels, but it takes a color code to color the button label in that position. <code>customButtonColor = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1} </code></p>
                 </li>
             </ul>
+        </article>
+        <article>
+            <h2>Events</h2>
+            <ul>
+                <li>
+                    <code>keypad(address:string, button:number , button_label:string)</code> <p>This signal is queued by the keypad when button pressed by a player. </p> <br />
+                    <p>address is the address of the keypad</p> <br />
+                    <p>button is the id of the button</p> <br />
+                    <p>button_label is the label of the button</p>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>Example</h2>
+            <pre>
+            <code class="language-lua">
+-- <a href="https://github.com/PC-Logix/OpenSecurity/wiki/Keypad" target="_blank">https://github.com/PC-Logix/OpenSecurity/wiki/Keypad</a>
+keypad = require("component").os_keypad
+event = require("event")
+
+local pin = "1234"
+local keypadInput = ""
+
+-- set this to true if you want to run the script as daemon
+local runScriptInBackground = false
+
+function updateDisplay()
+    local displayString = ""
+    for i=1,#keypadInput do
+        displayString = displayString .. "*"
+    end
+
+    keypad.setDisplay(displayString, 7)
+end
+
+function checkPin()
+    if keypadInput == pin then
+        keypad.setDisplay("granted", 2)
+    else
+        keypad.setDisplay("denied", 4)
+    end    
+    keypadInput = ""
+    os.sleep(1)
+end
+
+function keypadEvent(eventName, address, button, button_label)
+    print("button pressed: " .. button_label)
+  
+    if button_label == "*" then
+        -- remove last character from input cache
+        keypadInput = string.sub(keypadInput, 1, -2)
+    elseif button_label == "#" then
+        -- check the pin when the user confirmed the input
+        checkPin()
+    else
+        -- add key to input cache if none of the above action apply
+        keypadInput = keypadInput .. button_label
+    end
+
+    updateDisplay()  
+end
+
+-- listen to keypad events
+event.listen("keypad", keypadEvent)
+
+-- clear keypad display
+keypad.setDisplay("")
+
+
+if not runScriptInBackground then
+    -- sleep until the user interrupts the program with CTRL + C
+    local stopMe = false
+    event.listen("interrupted", function() stopMe = true; end)
+    while not stopMe do os.sleep(0.1) end
+
+    -- ignore keypad events on exit
+    event.ignore("keypad", keypadEvent)
+
+    -- show that the keypad is inactive
+    keypad.setDisplay("inactive", 6)
+end
+                </code>
+</pre>
         </article>
     </main>
     <footer>
         <p>copyright 2023 - Documentation</p>
     </footer>
+    <script src="./../../js/prism.js"></script>
 </body>
 </html>

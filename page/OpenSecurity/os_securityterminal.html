@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation</title>
     <link rel="stylesheet" href="./../../css/styles.css">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./../../images/favicon.ico">
 </head>
 <body>
     <header>
-        <h1>Component : name</h1>
+        <h1>Component : Security Terminal</h1>
         <div>
             <div>
                 <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
@@ -26,14 +26,38 @@
     <main>
         <article>
             <h2>Description</h2>
-            <p>This is the component provided by the name.</p>
-            <p>Component name: <code> name</code>.</p>
+            <p>This is the component provided by the Security Terminal block.</p>
+            <p>Component name: <code> os_securityterminal</code>.</p>
         </article>
         <article>
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>isEnabled():boolean</code> returns the status of the block
+                </li>
+                <li>
+                    <code>addUser(String:Password, String:Username):boolean</code> adds the Minecraft User as an allowed user.
+                </li>
+                <li>
+                    <code>delUser(String:Username):boolean </code> removes the Minecraft User as an allowed user.
+                </li>
+                <li>
+                    <code>setPassword(String:password):boolean </code> sets the block password, required to enable/disable and other actions
+                </li>
+                <li>
+                    <code>toggleParticle():boolean </code> switches particles to show the corners of the protected area
+                </li>
+                <li>
+                    <code>setRange(Int:range):boolean</code> sets the range of the protction area (range * 8 Blocks).increasing range increases energy cost. valid values [1 - 4]
+                </li>
+                <li>
+                    <code>enable(String:password):boolean</code>  enables the block, requires the correct password
+                </li>
+                <li>
+                    <code>disable(String:password):boolean</code> disables the block, requires the correct password
+                </li>
+                <li>
+                    <code>getAllowedUsers(String:password):boolean</code> returns a comma delimited string of current allowed users.
                 </li>
             </ul>
         </article>

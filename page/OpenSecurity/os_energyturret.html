@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation</title>
     <link rel="stylesheet" href="./../../css/styles.css">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./../../images/favicon.ico">
 </head>
 <body>
     <header>
-        <h1>Component : name</h1>
+        <h1>Component : Energy Turret</h1>
         <div>
             <div>
                 <a href="./../../index.html"><img src="./../../images/logo.png" alt="logo"></a>
@@ -26,20 +26,95 @@
     <main>
         <article>
             <h2>Description</h2>
-            <p>This is the component provided by the name.</p>
-            <p>Component name: <code> name</code>.</p>
+            <p>This is the component provided by the  Energy Turret block.</p>
+            <p>Component name: <code> os_energyturret</code>.</p>
         </article>
         <article>
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>powerOn()</code> Turns on the turret.
+                </li>
+                <li>
+                    <code>powerOff()</code> Turns off the turret.
+                </li>
+                <li>
+                    <code>isReady()</code> Returns true if the turret has cooled down from it's previous fire, is armed, and the barrel is valid, otherwise false.
+                </li>
+                <li>
+                    <code>isPowered()</code> Returns true if the turret is powered on, otherwise false.
+                </li>
+                <li>
+                    <code>setArmed(armed:boolean)</code> Arms and disarms the turret, must be armed to fire.
+                </li>
+                <li>
+                    <code>extendShaft(len:number)</code>  Valid range (0-2) extends/retracts the rotator shaft, must be at least 1 to fire.
+                </li>
+                <li>
+                    <code>getShaftLength()</code> Returns the shaft length.
+                </li>
+                <li>
+                    <code>moveToRadians(YaxeRad, XaxeRad)</code>  Moves the turret in radians instead of degrees.
+                </li>
+                <li>
+                    <code>moveTo(YaxeDeg, XaxeDeg)</code> Moves the turret's aim to the provided coords and tries to use shortest rotation to move to them as quick as possible.
+                </li>
+                <li>
+                    <code>isOnTarget()</code> Returns true if the turret has finished moving to it's target, false if not
+                </li>
+                <li>
+                    <code>fire()</code> Returns true if fired, or false, error if it was unable to fire, not enough energy, or gun hasn't cooled down.
                 </li>
             </ul>
+        </article>
+        <article>
+            <h2>Example</h2>
+            <pre>
+            <code class="language-lua">
+-- <a href="https://github.com/PC-Logix/OpenSecurity/wiki/EnergyTurret" target="_blank">https://github.com/PC-Logix/OpenSecurity/wiki/EnergyTurret</a>
+--[[
+  Minimal example of turret usage
+
+  This script will command turret to shoot exactly once
+  pointing towards south with cannon being positioned
+  parallel to ground
+]]
+
+local component = require "component"
+local turret = component.os_energyturret
+
+-- rotation specified in degrees
+local horizontalRotation = 180
+local verticalRotation = 0
+
+-- prepare turret to fire
+turret.powerOn()
+turret.setArmed(true)
+
+-- rotate it horizontally and vertically
+turret.moveTo(horizontalRotation, verticalRotation)
+
+-- wait while turret is still rotating 
+while turret.isOnTarget() == false do
+  os.sleep(0.1)
+end
+
+-- turret is now on target, try to fire
+local fired, error = turret.fire()
+
+-- if was unable to fire, print why
+if fired == false then
+  print("Unable to fire: " .. error)
+end
+
+turret.powerOff()
+                </code>
+</pre>
         </article>
     </main>
     <footer>
         <p>copyright 2023 - Documentation</p>
     </footer>
+    <script src="./../../js/prism.js"></script>
 </body>
 </html>
