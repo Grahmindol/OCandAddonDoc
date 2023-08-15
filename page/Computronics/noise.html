@@ -33,7 +33,34 @@
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>clear(channel:number)</code> Clears the buffer.
+                </li>
+                <li>
+                    <code>process():boolean</code> Starts processing the buffer and clears it. Returns true on success.
+                </li>
+                <li>
+                    <code>isReady():boolean</code> returns true if the card is not already processing a command
+                </li>
+                <li>
+                    <code>setMode(channel:number, mode:number):boolean</code> Sets the audio mode of the specified channel.
+                </li>
+                <li>
+                    <code>add(channel:number, frequency:number, duration:number [, initialDelay:number]):boolean</code> Adds the frequency played with the duration to the channel's buffer, optionally with a delay before playing. Returns true on success.
+                </li>
+                <li>
+                    <code>getMode(channel:number):number</code> returns the current mode of the specified channel
+                </li>
+                <li>
+                    <code>play(channels:table):boolean</code> table must have 8 or fewer entries. Each entry must be a table containing a frequency and a duration as values; plays each frequency for the specified duration. Returns true on success.
+                </li>
+                <li>
+                    <code>getActiveChannels():number</code> returns the amount of channels currently in use
+                </li>
+                <li>
+                    <code>modes:table</code> 
+                </li>
+                <li>
+                    <code>channel_count:table</code> 
                 </li>
             </ul>
         </article>

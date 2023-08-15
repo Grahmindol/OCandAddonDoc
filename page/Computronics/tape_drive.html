@@ -33,7 +33,46 @@
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>isEnd():boolean</code> Returns true if the tape drive is empty or the inserted tape has reached its end
+                </li>
+                <li>
+                    <code>setLabel(label:string):string</code> Sets the label of the tape. Returns the new label, or nil if there is no tape inserted
+                </li>
+                <li>
+                    <code>write(data:number or string)</code> Writes the specified data to the tape if there is one inserted
+                </li>
+                <li>
+                    <code>getSize():number</code> Returns the size of the tape, in bytes
+                </li>
+                <li>
+                    <code>setVolume(volume:number)</code> Sets the volume of the tape drive. Needs to be beween 0 and 1
+                </li>
+                <li>
+                    <code>stop():boolean</code> Make the Tape Drive stop playing the tape. Returns true on success
+                </li>
+                <li>
+                    <code>isReady():boolean</code> Returns true if there is a tape inserted
+                </li>
+                <li>
+                    <code>seek(length:number):number</code> Seeks the specified amount of bytes on the tape. Negative values for rewinding. Returns the amount of bytes sought, or nil if there is no tape inserted
+                </li>
+                <li>
+                    <code>read([length:number]):string</code> Reads and returns the specified amount of bytes or a single byte from the tape. Returns nil if there is no tape inserted
+                </li>
+                <li>
+                    <code>getLabel():string</code> Returns the current label of the tape, or nil if there is no tape inserted
+                </li>
+                <li>
+                    <code>getPosition():number</code> Returns the position of the tape, in bytes
+                </li>
+                <li>
+                    <code>play():boolean</code> Make the Tape Drive start playing the tape. Returns true on success
+                </li>
+                <li>
+                    <code>getState():string</code> Returns the current state of the tape drive
+                </li>
+                <li>
+                    <code>setSpeed(speed:number):boolean</code> Sets the speed of the tape drive. Needs to be beween 0.25 and 2. Returns true on success
                 </li>
             </ul>
         </article>

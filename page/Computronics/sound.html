@@ -33,7 +33,58 @@
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>clear()</code> Clears the instruction queue.
+                </li>
+                <li>
+                    <code>open(channel:number)</code> Opens the specified channel, allowing sound to be generated.
+                </li>
+                <li>
+                    <code>process()</code> Starts processing the queue; Returns true is processing began, false if there is still a queue being processed.
+                </li>
+                <li>
+                    <code>close(channel:number)</code> Closes the specified channel, stopping sound from being generated.
+                </li>
+                <li>
+                    <code>delay(duration:number)</code> Adds a delay of the specified duration in milliseconds, allowing sound to generate.
+                </li>
+                <li>
+                    <code>setTotalVolume(volume:number)</code> Sets the general volume of the entire sound card to a value between 0 and 1. Not an instruction, this affects all channels directly.
+                </li>
+                <li>
+                    <code>setADSR(channel:number, attack:number, decay:number, attenuation:number, release:number)</code> Assigns ADSR to the specified channel with the specified phase durations in milliseconds and attenuation between 0 and 1.
+                </li>
+                <li>
+                    <code>resetEnvelope(channel:number)</code> Removes ADSR from the specified channel.
+                </li>
+                <li>
+                    <code>setLFSR(channel:number, initial:number, mask:number)</code> Makes the specified channel generate LFSR noise. Functions like a wave type.
+                </li>
+                <li>
+                    <code>resetAM(channel:number)</code> Removes the specified channel's amplitude modulator.
+                </li>
+                <li>
+                    <code>setFrequency(channel:number, frequency:number)</code> Sets the frequency on the specified channel.
+                </li>
+                <li>
+                    <code>resetFM(channel:number)</code> Removes the specified channel's frequency modulator.
+                </li>
+                <li>
+                    <code>setWave(channel:number, type:number)</code> Sets the wave type on the specified channel.
+                </li>
+                <li>
+                    <code>setAM(channel:number, modIndex:number)</code> Assigns an amplitude modulator channel to the specified channel.
+                </li>
+                <li>
+                    <code>setVolume(channel:number, volume:number)</code> Sets the volume of the channel between 0 and 1.
+                </li>
+                <li>
+                    <code>setFM(channel:number, modIndex:number, intensity:number)</code> Assigns a frequency modulator channel to the specified channel with the specified intensity.
+                </li>
+                <li>
+                    <code>channel_count:table</code> 
+                </li>
+                <li>
+                    <code>modes:table</code> 
                 </li>
             </ul>
         </article>

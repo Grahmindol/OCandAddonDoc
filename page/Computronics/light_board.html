@@ -33,7 +33,19 @@
             <h2>Methods</h2>
             <ul>
                 <li>
-                    <code>func</code> doc
+                    <code>isActive(index:number):boolean</code> Returns true if the light at the specified position is currently active
+                </li>
+                <li>
+                    <code>setColor(index:number, color:number):boolean</code> Sets the color of the specified light. Returns true on success, false and an error message otherwise
+                </li>
+                <li>
+                    <code>setActive(index:number, active:boolean):boolean</code> Turns the specified light on or off. Returns true on success, false and an error message otherwise
+                </li>
+                <li>
+                    <code>getColor(index:number):number</code> Returns the color of the specified light on success, false and an error message otherwise
+                </li>
+                <li>
+                    <code>light_count:table</code>
                 </li>
             </ul>
         </article>
