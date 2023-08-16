@@ -1,5 +1,9 @@
 //from http://thecodeplayer.com/walkthrough/matrix-rain-animation-html5-canvas-javascript
 
+function getRandomInt(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 var c = document.getElementById("c");
 var ctx = c.getContext("2d");
 
@@ -18,7 +22,7 @@ var drops = [];
 //x below is the x coordinate
 //1 = y co-ordinate of the drop(same for every drop initially)
 for (var x = 0; x < columns; x++)
-	drops[x] = 1;
+	drops[x] = getRandomInt(0, c.height / font_size);
 
 //drawing the characters
 function draw() {
