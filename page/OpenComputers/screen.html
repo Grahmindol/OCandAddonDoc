@@ -85,7 +85,7 @@
                     </ul>
                 </li>
                 <li>
-                    <code>touch(screenAddress: string, x: number, y: number, button: number, playerName: string) </code> 
+                    <code>touch(screenAddress: string, x: number, y: number, button: number, playerName: string) </code>
                     <p>This signal is queued by screens of tier two and tier three when they are clicked. This includes left clicks in the GUI (i.e. when a keyboard is attached) or when right-clicking/activating them in the world directly (i.e. when no keyboard is attached or when sneak-activating).</p>
                     <ul>
                         <li>
@@ -106,7 +106,7 @@
                     </ul>
                 </li>
                 <li>
-                    <code>drag(screenAddress: string, x: number, y: number, button: number, playerName: string) </code> 
+                    <code>drag(screenAddress: string, x: number, y: number, button: number, playerName: string) </code>
                     <p>This signal is almost equivalent to the touch signal. The only difference is the implicit meaning: when this signal is fired, it “belongs” to a touch signal that was fired earlier. This can only be triggered by dragging in the GUI.</p>
                     <ul>
                         <li>
@@ -127,7 +127,7 @@
                     </ul>
                 </li>
                 <li>
-                    <code>drop(screenAddress: string, x: number, y: number, button: number, playerName: string) </code> 
+                    <code>drop(screenAddress: string, x: number, y: number, button: number, playerName: string) </code>
                     <p>This signal is triggered when the player releases the mouse button after a touch signal. Despite the name, it does not necessarily follow a drag signal.</p>
                     <ul>
                         <li>
@@ -148,7 +148,7 @@
                     </ul>
                 </li>
                 <li>
-                    <code>scroll(screenAddress: string, x: number, y: number, direction: number, playerName: string) </code> 
+                    <code>scroll(screenAddress: string, x: number, y: number, direction: number, playerName: string) </code>
                     <p>This signal is queued by screens of tier two and tier three when the player uses the mouse wheel in the GUI.</p>
                     <ul>
                         <li>
@@ -169,7 +169,7 @@
                     </ul>
                 </li>
                 <li>
-                    <code>walk(screenAddress: string, x: number, y: number[, playerName: string]) </code> 
+                    <code>walk(screenAddress: string, x: number, y: number[, playerName: string]) </code>
                     <p>This signal is queued by screens of tier two and tier three when a player or other entity walks on them.</p>
                     <ul>
                         <li>
@@ -191,6 +191,7 @@
     </main>
     <footer>
         <p>copyright 2023 - Documentation</p>
-    </footer><script src="./../../js/background.js"></script>
+    </footer>
+    <script src="./../../js/background.js"></script>
 </body>
 </html>
