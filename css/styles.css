@@ -33,11 +33,11 @@ body {
 
     /* Hide the scrollbar */
     body::-webkit-scrollbar {
-        width: 0.5em;
+        width: 0;
     }
 
     body::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.75);
         border-radius: 4px;
     }
 
