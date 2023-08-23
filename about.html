@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Documentation</h1>
+        <div class="container">
+            <div class="logo">
+                <a href="./index.html"><img src="./images/logo.png" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <canvas id="c"></canvas>
+    <main>
+        <section>
+            <h2>About me:</h2>
+            <div style="display: flex; ">
+                <div class="card-body">
+                    <canvas class="skin-3d" width="375" height="500" style="cursor: pointer; width: 300px" data-id="id1" data-model="classic" data-time="0"></canvas>
+                    <div>
+                        <button style="background-color:#00000000;border:none;" id="play-pause-btn" title="Pause" data-play-title="Play" data-pause-title="Pause" ><i class="fas fa-pause"></i></button>
+                        <input type="hidden" name="theta" value="30" id="render-form-theta">
+                        <input type="hidden" name="phi" value="20" id="render-form-phi">
+                        <input type="hidden" name="time" value="0" id="render-form-time">
+                    </div>
+                </div>
+
+                <!--<img src="https://crafatar.com/renders/body/22c782630051400d87be54d31c272d40?overlay&scale=10" style="margin:50px" />-->
+                <div>
+                    <h3>name: Grahmindol</h3>
+                    <p>I love minecraft and this mod <h1>.</h1></p>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>copyright 2023 - Documentation</p>
+    </footer>
+    <script src="./js/background.js"></script>
+    <script>
+        var cookie = "true"
+        function setCookie(name, val) {
+            cookie = val
+        }
+        function getCookie(name) {
+            return cookie;
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://s.namemc.com/js/three.min.js?v=d9f7c8e2c798bfbcd1f1ecd6a1ef6ef0"></script>
+    <script src="./js/skin_render_nameMC.js"></script>
+    <script>
+        // def get and set cookie
+
+        const pngs = {
+            id1: "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",
+
+        };
+        // Call the nmci function with the PNG data object
+        nmci(pngs)
+            .then(() => {
+                console.log("Image processing completed successfully.");
+            })
+            .catch((error) => {
+                console.error("An error occurred:", error);
+            });
+    </script>
+</body>
+</html>
