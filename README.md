@@ -5,7 +5,6 @@ Ce projet est un site web dédié à la documentation du mod **OpenComputers** e
 
 ## 🌟 Fonctionnalités
 
-- **Documentation Automatique** : Toutes les pages sont créées à partir du code source des mods, ce qui permet une mise à jour constante et précise.
 - **Navigation Facile** : Chaque mod et ses composants sont regroupés dans des sections spécifiques avec des liens internes pour un accès rapide aux informations.
 - **Mods Supportés** :
   - **OpenComputers** : Ajoute des ordinateurs programmables en Lua.
