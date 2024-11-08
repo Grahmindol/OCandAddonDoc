@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ocandcoluadoc.ddns.net/sitemap.xml
+Sitemap: https://ocandcoluadoc.ddns.net/sitemap_index.xml
